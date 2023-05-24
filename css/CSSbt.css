@@ -1,0 +1,17 @@
+main{
+    height: calc(100vh - 24px - 44px - 48px - 10px) ;
+    width: 652px;
+    background-color: white;
+    margin: 12px;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+form{
+    margin: 15px;
+    width: 620px;
+    color: rgb(25,27,29);
+    padding-top: 5px;
+}

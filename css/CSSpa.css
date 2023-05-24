@@ -1,0 +1,15 @@
+main{
+    height: calc(100vh - 24px - 44px - 48px - 10px) ;
+    width: 652px;
+    background-color: white;
+    margin: 12px;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#map{
+    width: 600px;
+    height: 500px;
+}

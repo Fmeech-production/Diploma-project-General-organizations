@@ -1,0 +1,864 @@
+/* Общие стили */
+input {
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #edf1f7;
+  background-image: url('../img/fon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#rememberMeImg {
+  display: none;
+  width: 15px;
+  height: 20px;
+  top: -5px;
+  left: 0px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#rememberMe {
+  width: 13px;
+  height: 13px;
+  background-color: rgb(201, 202, 214);
+  border-radius: 30%;
+  border: none;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 3px;
+  margin-right: 7px;
+  cursor: pointer;
+
+
+}
+
+label {
+  cursor: pointer;
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.409);
+  display: none;
+
+}
+
+.popup-main {
+  background-color: white;
+  width: 50vw;
+  height: 20vw;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.popup-text {
+  width: 46vw;
+
+  font-size: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.error {
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 420px;
+  height: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+
+}
+.PrivacyPolicy{
+  margin-left: 39px; 
+  margin-top: 5px; 
+  display: flex;
+}
+#checkboxPrivacyPolicy{
+  margin-bottom: auto;
+}
+
+.labelPrivacyPolicy{
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 39px - 20px);
+  white-space: nowrap;
+  font-size: 15.8px;
+}
+.PrivacyPolicySsilka {
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 5px;
+  color: rgb(70, 108, 211);
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1000px)
+
+/* Декстоп и экраны от ноутбуков */
+  {
+  .otstyp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(800px + 15%);
+    height: 80%;
+    min-height: 624px;
+    transform: translate(-50%, -50%);
+
+  }
+
+  main {
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /*удалить выходящие за рамки контейнера элементы*/
+    box-shadow: 0px 0px 15px #BBC4D9;
+  }
+
+  aside {
+    width: 50%;
+    height: 100%;
+    background-color: #5086f4;
+  }
+
+  .img-start-left {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .form-log {
+    width: 50%;
+    height: 100%;
+  }
+
+  .div-img-logo {
+    width: 98px;
+    height: 98px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+
+  .img-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px rgb(249, 247, 252) solid;
+  }
+
+  .Hello {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .podpis {
+
+    font-size: 20px;
+    color: rgb(86, 86, 86);
+  }
+
+  .contener-input {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .login {
+    width: 400px;
+    height: 16px;
+    padding: 12px 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px rgba(187, 191, 199, 0.685) solid;
+
+    background-color: #ffb8aa;
+    background-color: rgb(248, 251, 252);
+    color: rgb(98, 98, 98);
+  }
+
+  .login:hover {
+
+    border: 1px rgb(98, 147, 222) solid;
+    background-color: rgba(255, 255, 255, 0.194);
+    color: rgb(0, 0, 0);
+  }
+
+  .login:focus {
+    height: 14px;
+
+    padding: 12px 9px;
+    border: 2px rgb(98, 147, 222) solid;
+    background-color: rgba(255, 255, 255, 0.194);
+    color: rgb(0, 0, 0);
+
+  }
+
+  .login:hover::placeholder {
+    color: rgb(98, 147, 222);
+  }
+
+  .login:focus::placeholder {
+    color: rgb(98, 147, 222);
+  }
+
+  .login::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    color: rgb(187, 191, 199);
+  }
+
+  .form-btn {
+    width: 420px;
+    padding: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: rgb(53, 91, 192);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-btn:hover {
+
+    background-color: rgb(70, 108, 211);
+  }
+
+  .form-btn:active {
+
+    background-color: rgb(106, 142, 214);
+  }
+
+  .box-acktiv {
+    display: flex;
+    width: 420px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(201, 202, 214);
+  }
+
+  .acktiv1 {}
+
+  .acktiv2 {
+    margin-left: auto;
+    color: rgb(53, 91, 192);
+    cursor: pointer;
+  }
+
+  .acktiv3 {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    bottom: 20px;
+    left: 25%;
+    transform: translate(-50%, 0);
+  }
+
+  .RegSing {
+    color: rgb(53, 91, 192);
+  }
+
+  .popup-main {
+    width: 24vw;
+    height: 12vw;
+  }
+
+  .popup-text {
+    width: 18vw;
+    text-align: left;
+    font-size: 20px;
+  }
+
+
+
+  .error-login {
+    top: 2px;
+  }
+
+  .error-newpassword {
+    top: 62px;
+  }
+
+  .error-newpassword2 {
+    top: 124px;
+  }
+
+  .error-desk {
+    display: block;
+  }
+
+  .error-mob {
+    display: none;
+  }
+}
+
+
+
+
+
+@media (min-width: 481px) and (max-width: 999px)
+
+/* Планшеты и мини экраны от ноутбуков  */
+  {
+  .otstyp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 640px;
+    transform: translate(-50%, -50%);
+  }
+
+  main {
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 640px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /*удалить выходящие за рамки контейнера элементы*/
+    box-shadow: 0px 0px 15px #BBC4D9;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .img-start-left {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .form-log {
+    width: 100%;
+    height: 100%;
+  }
+
+  .div-img-logo {
+    width: 98px;
+    height: 98px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+
+  .img-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px rgb(249, 247, 252) solid;
+  }
+
+  .Hello {
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .podpis {
+
+    font-size: 20px;
+    color: rgb(86, 86, 86);
+  }
+
+  .contener-input {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .login {
+    width: 400px;
+    height: 16px;
+    padding: 12px 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px rgba(187, 191, 199, 0.685) solid;
+    background-color: rgb(248, 251, 252);
+    color: rgb(98, 98, 98);
+  }
+
+  .login:hover {
+
+    border: 1px rgb(98, 147, 222) solid;
+    background-color: rgba(255, 255, 255, 0.194);
+    color: rgb(0, 0, 0);
+  }
+
+  .login:focus {
+    height: 14px;
+
+    padding: 12px 9px;
+    border: 2px rgb(98, 147, 222) solid;
+    background-color: rgba(255, 255, 255, 0.194);
+    color: rgb(0, 0, 0);
+
+  }
+
+  .login:hover::placeholder {
+    color: rgb(98, 147, 222);
+  }
+
+  .login:focus::placeholder {
+    color: rgb(98, 147, 222);
+  }
+
+  .login::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    color: rgb(187, 191, 199);
+  }
+
+  .form-btn {
+    width: 420px;
+    padding: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: rgb(53, 91, 192);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-btn:hover {
+
+    background-color: rgb(70, 108, 211);
+  }
+
+  .form-btn:active {
+
+    background-color: rgb(106, 142, 214);
+  }
+
+  .box-acktiv {
+    display: flex;
+    width: 420px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(201, 202, 214);
+  }
+
+  .acktiv1 {}
+
+  .acktiv2 {
+    margin-left: auto;
+    color: rgb(53, 91, 192);
+    cursor: pointer;
+  }
+
+  .acktiv3 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .RegSing {
+    color: rgb(53, 91, 192);
+  }
+
+  @media (min-width: 481px) and (max-width: 630px) {
+    .login {
+      width: 330px;
+    }
+
+    .form-btn {
+      width: 350px;
+    }
+
+    .box-acktiv {
+      width: 330px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .podpis {
+      width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .error-login {
+      width: 330px;
+      top: 2px;
+    }
+
+    .error-newpassword {
+      width: 330px;
+      top: 62px;
+    }
+
+    .error-newpassword2 {
+      width: 330px;
+      top: 124px;
+    }
+  }
+
+  .popup-main {
+    width: 64vw;
+    height: 36vw;
+  }
+
+  .popup-text {
+    width: 50vw;
+    text-align: left;
+    font-size: 26px;
+  }
+
+
+
+  .error-login {
+    top: 2px;
+  }
+
+  .error-newpassword {
+    top: 62px;
+  }
+
+  .error-newpassword2 {
+    top: 124px;
+  }
+
+  .error-desk {
+    display: block;
+  }
+
+  .error-mob {
+    display: none;
+  }
+}
+
+
+
+
+
+
+@media (min-width: 0px) and (max-width: 480px)
+
+/* Телефоны */
+  {
+  .otstyp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 155vw;
+    transform: translate(-50%, -50%);
+  }
+
+  main {
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /*удалить выходящие за рамки контейнера элементы*/
+    box-shadow: 0px 0px 15px #BBC4D9;
+  }
+
+  aside {
+    display: none;
+  }
+
+
+  .form-log {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .div-img-logo {
+    width: 98px;
+    height: 98px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+
+  .img-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px rgb(249, 247, 252) solid;
+  }
+
+  .Hello {
+    font-size: 7vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  .podpis {
+
+    font-size: 5vw;
+    color: rgb(86, 86, 86);
+  }
+
+  .contener-input {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .login {
+    width: 84%;
+    height: 16px;
+    padding: 2.4vw 2vw;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px rgba(187, 191, 199, 0.685) solid;
+    background-color: rgb(248, 251, 252);
+    color: rgb(98, 98, 98);
+  }
+
+  .login:hover {
+    border: 1px rgb(98, 147, 222) solid;
+    background-color: rgba(255, 255, 255, 0.194);
+    color: rgb(0, 0, 0);
+  }
+
+  .login:focus {
+    height: 14px;
+
+    padding: 12px 9px;
+    border: 2px rgb(98, 147, 222) solid;
+    background-color: rgba(255, 255, 255, 0.194);
+    color: rgb(0, 0, 0);
+
+  }
+
+  .login:hover::placeholder {
+    color: rgb(98, 147, 222);
+  }
+
+  .login:focus::placeholder {
+    color: rgb(98, 147, 222);
+  }
+
+  .login::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    color: rgb(187, 191, 199);
+  }
+
+  .form-btn {
+    width: calc(84% + 4vw);
+    padding: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    background-color: rgb(53, 91, 192);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-btn:hover {
+
+    background-color: rgb(70, 108, 211);
+  }
+
+  .form-btn:active {
+
+    background-color: rgb(106, 142, 214);
+  }
+
+  .box-acktiv {
+    display: flex;
+    width: calc(84% + 4vw);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(201, 202, 214);
+  }
+
+  .acktiv1 {}
+
+  .acktiv2 {
+    margin-left: auto;
+    color: rgb(53, 91, 192);
+    cursor: pointer;
+  }
+
+  .acktiv3 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .RegSing {
+    color: rgb(53, 91, 192);
+  }
+
+
+
+  .popup-main {
+    width: 90vw;
+    height: 70vw;
+  }
+
+  .popup-text {
+    width: 80vw;
+    text-align: left;
+    font-size: 28px;
+  }
+
+
+  .error-login {
+    width: 84%;
+    top: 2px;
+  }
+
+  .error-newpassword {
+    width: 84%;
+    top: 57px;
+  }
+
+  .error-newpassword2 {
+    width: 84%;
+    top: 114px;
+  }
+
+  .error-desk {
+    display: none;
+  }
+
+  .error-mob {
+    display: block;
+    font-size: 4.5vw;
+  }
+  .PrivacyPolicy{
+    margin-left: 20px; 
+    margin-top: 20px; 
+    display: flex;
+  }
+  #checkboxPrivacyPolicy{
+    margin-bottom: auto;
+  }
+  
+  .labelPrivacyPolicy{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 39px - 20px);
+    white-space: normal;
+    font-size: 16px;
+  }
+}
+
+
+.form-log {
+  display: block;
+}
+
+.form-reg {
+  display: none;
+}
+
+#reg-input1 {}
+
+#reg-input2 {
+  display: none;
+}
+
+#reg-input3 {
+  display: none;
+}

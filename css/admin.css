@@ -1,0 +1,72 @@
+	.account-type-0 {
+	    color: #1E90FF;
+	    /* Синий цвет для сотрудника наркологии */
+	}
+
+	.account-type-1 {
+	    color: #FF4500;
+	    /* Оранжевый цвет для начальника отдела хозяйственной части */
+	}
+
+	.account-type-2 {
+	    color: #228B22;
+	    /* Зеленый цвет для сотрудника отдела хозяйственной части */
+	}
+
+	.account-type-3 {
+	    color: #8B008B;
+	    /* Фиолетовый цвет для водителя */
+	}
+
+	.account-type-4 {
+	    color: #FF0000;
+	    /* Красный цвет для Системного-администратора */
+	}
+
+	.black-circle-0 {
+	    background-color: #1E90FF;
+	    /* Синий цвет для сотрудника наркологии */
+	}
+
+	.black-circle-1 {
+	    background-color: #FF4500;
+	    /* Оранжевый цвет для начальника отдела хозяйственной части */
+	}
+
+	.black-circle-2 {
+	    background-color: #228B22;
+	    /* Зеленый цвет для сотрудника отдела хозяйственной части */
+	}
+
+	.black-circle-3 {
+	    background-color: #8B008B;
+	    /* Фиолетовый цвет для водителя */
+	}
+
+	.black-circle-4 {
+	    background-color: #FF0000;
+	    /* Красный цвет для Системного-администратора */
+	}
+	.account_type_select {
+		width: calc(100% - 10px);
+		height: 40px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 0 10px;
+		font-size: 16px;
+		color: #000;
+		outline: none;
+		margin-left: 5px;
+	}
+	.account_type_select:focus {
+		width: calc(100% - 10px);
+		height: 40px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 0 10px;
+		font-size: 16px;
+		color: #000;
+		outline: none;
+		margin-left: 5px;
+		border-color: #1E90FF;
+	}

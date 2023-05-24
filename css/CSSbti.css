@@ -1,0 +1,47 @@
+main {
+    height: calc(100vh - 24px - 44px - 48px - 10px);
+    width: 652px;
+    background-color: white;
+    margin: 12px;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    height: auto;
+    margin-bottom: 100%;
+}
+
+form {
+    margin: 15px;
+    width: 620px;
+    color: rgb(25, 27, 29);
+    padding-top: 5px;
+}
+
+
+
+
+.zaivka-stroka {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.zaivka-lable-card {
+    font-size: 16px;
+    color: rgb(112, 118, 123);
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    margin-left: 20px;
+}
+
+.zaivka-info-card {
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    margin-left: 4px;
+    font-weight: 700;
+    color: rgb(29, 31, 31);
+}

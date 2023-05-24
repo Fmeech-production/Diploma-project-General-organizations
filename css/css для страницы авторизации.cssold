@@ -1,0 +1,98 @@
+.sing {
+    text-align: center;
+    align-items: center;
+
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 10 10px 1px black;
+    background: white;
+    display: flex;
+    position: absolute;
+    height: 600px;
+    width: 80%;
+    top: 50%; /* Расположение элемента по вертикали в центре экрана */
+  left: 50%; /* Расположение элемента по горизонтали в центре экрана  */
+  transform: translate(-50%, -50%); /* Смещение элемента на половину его ширины и высоты  */
+  }
+.left_box {
+width: 50%;
+}
+.img_box {
+width: 100%;
+}
+.right_box {
+    width: 50%;
+}
+.img_profil_block {
+    width:25%;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    
+}
+.img_profil {
+    border-radius: 50%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title_sing {
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.log_line {
+    width: 50%;
+margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+.text_sing{
+  font-size: medium;
+  color: rgb(106, 106, 106);  
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+.input_line {
+font-family: Arial, Helvetica, sans-serif;
+font-size: medium;
+width: 100%;
+outline: none;
+}
+.Reg_tex {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt ;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.reg_btn {
+}
+
+.line_btn {
+    width: 60%;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sing_btn {
+    width: 70%;
+    font-size: large;
+    padding: 0px 15px 0px 15px  ;
+    border: none;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25px;
+    border-radius: 25px;
+    background-color: rgb(35, 255, 196);
+}
+
+.sing_btn:hover {
+ box-shadow: 0 3px 5px 1px rgb(0, 81, 255);
+}

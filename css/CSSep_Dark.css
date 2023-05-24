@@ -1,0 +1,191 @@
+html,
+body {
+    background-color: rgb(32,34,37);
+}
+nav{
+    background-color: rgb(47,49,54);
+}
+ul {
+    background-color: rgb(47,49,54);
+}
+li{
+    border-bottom: 3px solid rgb(47,49,54);
+}
+li:hover{
+    background-color: rgb(66,70,77);
+    border-bottom: 3px solid rgb(60,63,69);
+}
+
+.li-icon{
+    filter: invert(0.92);
+}
+.not-black{
+    filter: invert(0);
+}
+
+.select a {
+    color: white;
+}
+
+.select {
+    background-color: rgb(66,70,77);
+    border-bottom: 3px solid rgb(60,63,69);
+}
+
+.select .li-icon {
+
+    opacity: 0.75;
+    filter: invert();
+}
+    
+.select:hover {
+    background-color: rgb(60,63,69);
+    border-bottom: 3px solid rgb(60,63,69);
+}
+header{
+    background-color: rgb(32,34,37);
+}
+.cabinet-name-header{
+    color: white;
+}
+.editor-background-greey{
+    background-color: rgb(47,49,54);
+    border-bottom: 3px solid rgb(60,63,69);
+}
+.avatar-editor{
+    background-color: rgb(47,49,54);
+}
+#id-ava-div{
+    border: 4px solid rgb(47,49,54);
+}
+main{
+    background-color: rgb(47,49,54);
+}
+.main-inpyt{
+    background-color: rgb(32,34,37);
+    border: 1px solid rgb(60,63,69);
+    color: rgb(150,152,157);
+}
+.main-inpyt:hover{
+    background-color: rgb(32,34,37);
+    border: 1px solid rgb(60,63,69);
+    color: white;
+}
+.main-inpyt:focus{
+    background-color: rgb(32,34,37);
+    border: 2px solid rgb(60,63,69);
+    color: white;
+}
+.main-inpyt::placeholder{
+    color: rgb(150,152,157);
+}
+
+.main-inpyt:hover::placeholder {
+    color: rgba(98, 148, 222, 0.8);
+}
+.main-inpyt:focus::placeholder {
+    color: rgba(98, 148, 222, 0.8);
+}
+.info_acc_text1{
+    color: white;
+}
+.main-lable{
+    color: white;
+}
+.logo {
+    border-bottom: 2px solid rgb(32,34,37);
+}
+
+.logo:hover {
+    background-color: rgb(47,49,54);
+    color: rgb(112, 118, 123);
+    border-bottom: 2px solid rgb(32,34,37);
+
+}
+
+.img-logo {
+    border: 1px rgb(156,163,175) solid;
+}
+.name-acc {
+    color: rgb(209,219,224);
+}
+hr {
+    background-color: rgb(60,63,69);
+}
+.ava-form-popup {
+    background-color: rgb(47,49,54);
+    color: white;
+}
+#cover_form2 {
+    background-color: rgb(30,30,30);
+}
+.slider {
+    background-color: rgb(212,213,214);
+}
+.ava-text1{
+    border-bottom: 1px solid rgba(237, 238, 240, 0.2);
+}
+.ava-text3{
+    border-top: 1px solid rgba(237, 238, 240, 0.2);
+}
+.save_rez{
+    background-color: rgb(237, 238, 240);
+    color: rgb(47,49,54);
+}
+.save_rez:hover {
+    background-color: rgba(237, 238, 240, 0.8);
+}
+.not_save_rez{
+    background-color: rgba(237, 238, 240, 0.2);
+    color: rgb(255, 255, 255);
+}
+.not_save_rez:hover {
+    background-color: rgba(237, 238, 240, 0.4);
+}
+.not_save_cover{
+    background-color: rgba(237, 238, 240, 0.2);
+    color: rgb(255, 255, 255);
+}
+.not_save_cover:hover {
+    background-color: rgba(237, 238, 240, 0.4);
+}
+.ava-form{
+}
+.close-new-ava{
+    filter: invert();
+}
+.label_new_ava2{
+    background-color: rgba(0, 0, 0, 0);
+}
+.label_new_ava2:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 3px dashed rgb(60,60,60);
+}
+.plus_new_ava{
+    filter: invert();
+}
+
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    margin: 15px;
+    background: rgb(46,51,56);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(32,34,37);
+    border-radius: 20px;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(32,34,37);
+    border-radius: 20px;
+    border: none;
+}

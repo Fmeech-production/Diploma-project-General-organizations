@@ -1,0 +1,643 @@
+@media (min-width: 0px) and (max-width: 980px)
+/* Телефоны */
+/* Планшеты и мини экраны от ноутбуков  */
+
+    {
+
+    html,
+    body {
+        width: 100%;
+        position: relative;
+    }
+
+    .wrap {
+        width: 100vw;
+    }
+
+    nav {
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        border-radius: 0;
+        top: 0;
+        left: -100%;
+        z-index: 102;
+        height: 62px;
+    }
+
+    ul {
+        padding-top: 5px;
+        width: 100%;
+        height: calc(100% - 62px);
+        top: 62px;
+        left: -100%;
+        transition: all 0.3s ease 0s;
+        position: fixed;
+        overflow: auto;
+    }
+
+    li {
+        width: calc(100% - 40px);
+        padding: 0 10px;
+        margin: 5px 10px;
+    }
+
+    .logo {
+        width: calc(100% - 30px);
+    }
+
+    .select {
+        width: calc(100% - 40px);
+        padding: 0 10px;
+        margin: 5px 10px;
+    }
+
+    .nav_burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+
+
+    .nav_burger span {
+        background-color: #c1c1c1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .nav_burger:before,
+    .nav_burger:after {
+        content: "";
+        background-color: #c1c1c1;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .nav_burger:before {
+        top: 0;
+    }
+
+    .nav_burger:after {
+        bottom: 0;
+    }
+
+    .nav_burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .nav_burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .nav_burger.active span {
+        opacity: 0;
+    }
+
+    .logo-text {
+        margin-left: 10px;
+    }
+
+    .div-img-logo {
+        position: absolute;
+        right: 0px;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    ul.active {
+        left: 0;
+    }
+
+    .active {}
+
+    .lock {}
+
+    header {
+        width: 100vw;
+        height: 62px;
+        display: flex;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 101;
+
+
+        margin: 0;
+        padding-left: 5px;
+        border-radius: 0;
+    }
+
+    header .nav_burger {
+        margin: auto 10px;
+    }
+
+    .cabinet-name-header {
+        font-size: 5vw;
+        font-weight: 700;
+        padding-top: 0px;
+        margin: auto 0;
+        width: auto;
+    }
+
+    .name-acc {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .avatar-editor {
+        width: 100vw;
+        margin: 0;
+        margin-top: 62px;
+    }
+
+    .avatar-editor-fon {
+        width: 100vw;
+        height: calc(170px + 15px);
+        margin: 0
+    }
+
+
+
+
+    main {
+        height: auto;
+        width: 100vw;
+        margin: 50px 0 0 0;
+        margin-bottom: 22px;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+    }
+
+    #block1 {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .main-lable {
+        width: calc(100% - 40px);
+        margin-left: 10px;
+        padding-left: 0;
+        font-size: 20px;
+    }
+
+    .main-inpyt {
+        width: calc(100vw - 40px);
+        height: 30px;
+    }
+
+    .main-inpyt:focus {
+        border: 1px solid #c1c1c1;
+        padding: 12px 10px;
+        height: 30px;
+    }
+
+    .form-btn {
+        width: calc(100% - 40px);
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .my-ava-div {
+        width: 92px;
+        height: 92px;
+        position: absolute;
+        top: calc(170px - calc(92px / 2));
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bcg {
+        width: 32px;
+        height: 32px;
+        top: calc(170px - calc(32px / 2) + 4px);
+        left: 50%;
+        right: 50%;
+
+        opacity: 0.9;
+        filter: invert(1);
+        cursor: pointer;
+    }
+
+    .bcg-div {
+        left: 50%;
+        right: 50%;
+        margin-left: 0;
+    }
+
+    .editor-background-greey {
+        margin-top: 170px;
+
+    }
+
+    .avatar-editor {
+        height: 260px;
+    }
+
+    .info_acc_text1 {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 50%;
+        right: 50%;
+        top: 230px;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    #ava-form {
+
+        z-index: 999;
+    }
+
+    .ava-form-popup {
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+        z-index: 999;
+        border-radius: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #new_ava {
+        height: calc(100vh - 59px);
+        width: 100vw;
+        top: 59px;
+    }
+
+    .new_ava_lable {
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+    .bnt_box_ed_st {
+        margin-top: 70px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100% - 20px);
+    }
+
+    #cover-form {
+        z-index: 999;
+    }
+
+    .label_new_ava2 {
+        width: calc(100% - 40px);
+        height: calc(100% - 60px - 59px - 130px);
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    #cover_form2 {
+        height: calc(100vh);
+        width: 100vw;
+        top: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .info_acc_text2 {
+
+        padding: 10px 20px 10px 20px;
+
+    }
+
+    .form_main_1 {
+        width: calc(100% - 30px);
+    }
+
+    .razdelitel {
+        width: 100%;
+        margin: 0;
+    }
+
+    .left {
+        width: 50%;
+        float: left;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .right {
+        width: 50%;
+        float: right;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-inpyt2 {
+        width: calc(100% - 30px)
+    }
+
+    .main-inpyt-left {
+        margin-right: auto;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .main-inpyt-right {
+        margin-left: auto;
+        margin-right: 0;
+        text-align: right;
+    }
+#current-time{
+    border: none;
+    background-color: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.main-select{
+    height: 38px;
+    padding: 0 0 0 10px;
+}
+.main-select:focus{
+    height: 38px;
+    padding: 0 0 0 10px;
+}
+
+.zaivka-stroka{
+    display: flex;
+    flex-direction: column;
+}
+.zaivka-info-card{
+    margin-left: 20px;
+}
+.card{
+    border-radius: 0;
+    max-height: calc(100% - 62px - 70px - 40px);
+}
+.Sending_message__container{
+border-radius: 0;
+width: 100%;
+margin: 0 0 12px 0;
+}
+.chat__message, .chat__message--left, .chat__message--right{
+    display: flex;
+    flex-direction: column;
+border-radius: 0;
+}
+
+.chat__messages{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+.chat__message__text{
+    width: calc(100% - 40px);
+    padding-right: 10px;
+}
+.chat__message{
+    position: relative;
+}
+.chat__message--right .chat__message__avatar{
+    order: -1;    
+    margin-left: auto;
+    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.chat__message--left .chat__message__avatar{
+    order: -1;    
+    margin-right: auto;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.chat__message--right .chat__message__name{
+    margin-right: 40px;
+}
+.chat__message--left .chat__message__name{
+    margin-left: 40px;
+}
+ 
+.form-btn{
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 10px
+}
+
+.mob_scroll{
+    max-height: 1000%;
+}
+
+.table_organizer{
+    height: calc(100% - 50px - 13px - 10px);
+    margin-bottom: 0;
+    overflow-y: auto;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+.zaivka-info-card{
+    margin-left: 20px;
+}
+
+.Odobreno-btn--Otcloneno{
+    margin: 0px;
+    margin-left: 0px;
+    width: calc(100% - 15px - 15px);
+    color: rgb(25, 27, 29);
+    padding-top: 0;
+}
+.btn__margin-right {
+    margin-left: 5px;
+}
+.btn__margin-left {
+    margin-right: -5px;
+}
+
+.mob_admin_panel{
+    width: calc(100% - 30px);
+}
+.square-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+}
+.square{
+    flex-basis: 100%;
+    aspect-ratio: 9/5;
+    margin: 10px calc(10% / 6) 10px calc(10% / 6);
+    position: relative;
+    box-shadow: 0 0 0 3px rgb(21, 21, 21);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    user-select: none;
+    transition: all .2s ease;
+}
+
+#add-user-form{
+    display: none;
+}
+.zaivka-time{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main_user_details{
+    height: auto;
+}
+
+.car_license_plate div:nth-child(1) {
+display: none;
+  }
+.car_license_plate div:nth-child(2) {
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    transform: translateY(-2px);
+    margin-left: 5px;
+    color: black;
+    font-weight: 700;
+    box-shadow: 0 0 0 3px black;
+  }
+  .form_car_knopka{
+      width: 100%;
+  }
+  .car_knopka{
+      width: calc(100% - 40px);
+      margin-left: 10px;
+      padding-left: 0;
+      padding-right: 0;
+  }
+  .form_driver_knopka{
+      width: 100%;
+  }
+  .driver_knopka{
+      width: calc(100% - 40px);
+      margin-left: 5px;
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

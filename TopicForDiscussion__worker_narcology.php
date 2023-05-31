@@ -10,20 +10,7 @@ $nav_select = 2.5;    //Выбор активного пункта меню
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title><?= $Headline ?> </title>
-	<link rel="stylesheet" href="css/CSSep.css">
-	<link rel="stylesheet" href="css/CSSpa.css">
-	<link rel="stylesheet" href="css/css-all.css">
-	<link rel="stylesheet" href="css/My_framevorke.css">
-	<?php if ($_COOKIE['isDarkMode'] == "true")
-		echo '<link rel="stylesheet" href="css/CSSep_Dark.css">';
-	?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="icons/logo1.png">
-	<link rel="stylesheet" href="css/CSSep_mobail.css?t=<?php echo(microtime(true).rand()); ?>"> <!-- Подключение стилей для мобильных устройств -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Подключение JQuery -->
-	<script src="js/constructor.js"></script> <!-- Подключение скриптов для работы popup  -->
+	<?php include 'php_constructor/head.php'; ?>
 </head>
 
 <body>
@@ -36,7 +23,7 @@ $nav_select = 2.5;    //Выбор активного пункта меню
 		?>
 		<main> <!-- Основной контент -->
 			<form action="New-TopicForDiscussion__worker_narcology.php" method="post" class="form_main_1">
-				<lable class="main-lable">Описание проблемы</lable>
+				<lable class="main-lable"><?= $loc['Описание проблемы'] ?></lable>
 				<input class="main-inpyt" name="problem-description" placeholder="Опишите проблему, о которой вы хотите сообщить" required maxlength="255">
 
 				<lable class="main-lable">Время отправки заявки:</lable>

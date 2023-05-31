@@ -14,19 +14,7 @@ $nav_select = 2;
 <html>
 
 <head>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<meta charset="utf-8">
-	<title><?= $Headline ?> </title>
-	<link rel="stylesheet" href="css/CSSep.css">
-	<link rel="stylesheet" href="css/CSSpa.css">
-	<link rel="stylesheet" href="css/css-all.css">
-	<link rel="stylesheet" href="css/My_framevorke.css">
-	<?php if ($_COOKIE['isDarkMode'] == "true")
-		echo '<link rel="stylesheet" href="css/CSSep_Dark.css">';
-	?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="icons/logo1.png">
-	<link rel="stylesheet" href="css/CSSep_mobail.css?t=<?php echo(microtime(true).rand()); ?>">
+	<?php include 'php_constructor/head.php'; ?>
 </head>
 
 

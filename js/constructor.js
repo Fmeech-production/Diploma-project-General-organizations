@@ -87,25 +87,27 @@ $(window).on('wheel', function(e) {
 
 
 $(document).ready(function() {
-    $(".slider-box").click(function() {
-        $("#phone-switch-toggle").change();
-    });
+  $(".slider-box").click(function() {
+      $("#phone-switch-toggle").change();
+      console.log('Переключение режимов просмотра таблицы.');
+  });
+
+  $("#phone-switch-toggle").change(function() {
+      console.log('Активировал старый рычаг.');
+      $(".block1").toggleClass("hidden");
+      $(".block2").toggleClass("hidden");
+      $(".phone-switch-background").toggleClass("phone-switch-background-overflow");
+      $(".phone-switch-label").toggleClass("phone-switch-label-owerflow");
+      $("html").toggleClass("html-overflow");
+      $("body").toggleClass("body-overflow");
+      $(".wrap").toggleClass("wrap-overflow");
+      $('main').toggleClass("main-overflow");
+      $("header").toggleClass("header-overflow");
+      $("hr").toggleClass("hr-overflow");
+      $("#add-user-form").toggleClass("hidden");
+  });
 });
-$(document).ready(function() {  // ЧТОБЫ НЕ ПОВТОРЯЛОСЬ КОД
-    $("#phone-switch-toggle").change(function() {
-        $(".block1").toggleClass("hidden");
-        $(".block2").toggleClass("hidden");
-        $(".phone-switch-background").toggleClass("phone-switch-background-overflow");
-        $(".phone-switch-label").toggleClass("phone-switch-label-owerflow");
-        $("html").toggleClass("html-overflow");
-        $("body").toggleClass("body-overflow");
-        $(".wrap").toggleClass("wrap-overflow");
-        $('main').toggleClass("main-overflow");
-        $("header").toggleClass("header-overflow");
-        $("hr").toggleClass("hr-overflow");
-        $("#add-user-form").toggleClass("hidden");
-    });
-});
+
 
 $("tr").click(function() {
   // если уже есть выделенная строка, убираем выделение

@@ -1,9 +1,9 @@
 <?php
 
-
 if (!defined('ROOT_DIR'))
-	define('ROOT_DIR', realpath(__DIR__ . './'));
-require_once(ROOT_DIR . '\vendor\autoload.php');
+	define('ROOT_DIR', realpath(__DIR__));
+require_once(ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
+
 
 use Fmeech2\Car;
 use Fmeech2\ConnectSQL;
@@ -32,20 +32,8 @@ $nav_select = 2.5;
 <html>
 
 <head>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<meta charset="utf-8">
-	<title><?= $Headline ?> </title>
-	<link rel="stylesheet" href="css/CSSep.css">
-	<link rel="stylesheet" href="css/CSSpa.css">
-	<link rel="stylesheet" href="css/css-all.css">
+	<?php include 'php_constructor/head.php'; ?>
 	<link rel="stylesheet" href="css/My_framevorke.css">
-	<?php if ($_COOKIE['isDarkMode'] == "true")
-		echo '<link rel="stylesheet" href="css/CSSep_Dark.css">';
-	?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="icons/logo1.png">
-	<link rel="stylesheet" href="css/CSSbti.css">
-	<link rel="stylesheet" href="css/CSSep_mobail.css?t=<?php echo (microtime(true) . rand()); ?>">
 </head>
 
 

@@ -1,16 +1,15 @@
 <?php
 // перейти в родительскую директорию, относительно этой директории.
 if (!defined('ROOT_DIR'))
-	define('ROOT_DIR', realpath(__DIR__ . './../'));
-// подключаем файл класса PHPMailer
-require_once(ROOT_DIR . '\vendor\autoload.php');
+	define('ROOT_DIR', realpath(__DIR__ . '..' . DIRECTORY_SEPARATOR));
+require_once(ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 
 use Fmeech2\ConnectSQL;
 
 $driverId = $_POST['driverId'];
 $car_id = $_POST['car_id'];
 
-if (!is_numeric($driverId)) 
+if (!is_numeric($driverId))
 	// $driverId не является числом
 	exit();
 

@@ -1,23 +1,26 @@
 <?php
 
-define('ROOT_DIR', realpath(__DIR__ . './'));
-require_once(ROOT_DIR . '\vendor\autoload.php');
+if (!defined('ROOT_DIR'))
+	define('ROOT_DIR', realpath(__DIR__));
+require_once(ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 
 use Fmeech2\Mail;
 use Fmeech2\ConnectSQL;
 use Fmeech2\ConnectCOOKIE;
+
+ob_start();// Включаем буферизацию вывода
 
 //Создание нового бронирования
 $Start_road = $_POST['Start_road'];
 $End_road = $_POST['End_road'];
 $Day = $_POST['Day'];
 $Start_time = $_POST['Start_time'];
-$End_time = $_POST['End_time'];
+$End_time = isset($_POST['End_time']) ? $_POST['End_time'] : 0;
 $Number_people = $_POST['Number_people'];
 $Time_of_change = time();
 $notes = $_POST['notes'];
 $telephone = $_POST['telephone'];
-include_once 'php_constructor\library.php';
+include_once 'php_constructor' . DIRECTORY_SEPARATOR . 'library.php';
 
 
 if (trim($Start_road) == "") $Start_road = "Наркология";

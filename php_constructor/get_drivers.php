@@ -1,9 +1,8 @@
 <?php
 
-
 if (!defined('ROOT_DIR'))
-    define('ROOT_DIR', realpath(__DIR__ . './../'));
-require_once(ROOT_DIR . '\vendor\autoload.php');
+	define('ROOT_DIR', realpath(__DIR__ . '..' . DIRECTORY_SEPARATOR));
+require_once(ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 
 use Fmeech2\Car;
 use Fmeech2\ConnectSQL;

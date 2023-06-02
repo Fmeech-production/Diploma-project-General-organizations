@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('ROOT_DIR'))
-	define('ROOT_DIR', realpath(__DIR__ . '..' . DIRECTORY_SEPARATOR));
+	define('ROOT_DIR', realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR));
 require_once(ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 
 use Fmeech2\Car;

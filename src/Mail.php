@@ -4,7 +4,7 @@ namespace Fmeech2;
 
 // перейти в родительскую директорию, относительно этой директории.
 if (!defined('ROOT_DIR'))
-	define('ROOT_DIR', realpath(__DIR__ . '..' . DIRECTORY_SEPARATOR));
+	define('ROOT_DIR', realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR));
 require_once(ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;

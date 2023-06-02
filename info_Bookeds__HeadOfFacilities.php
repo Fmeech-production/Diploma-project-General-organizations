@@ -402,7 +402,7 @@ $nav_select = 2.5;
 						<div class="zaivka-info-card">
 							<?php
 							if ($driverID == 0 || $driverID == null) {
-								echo "Водитель не выбран";
+								echo "Водитель не выбран"; 
 							} else {
 								echo $driver['SName'] . " " . $driver['Name'] . " " . $driver['PName'];
 							}

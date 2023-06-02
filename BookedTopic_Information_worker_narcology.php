@@ -35,20 +35,9 @@ $Найденый_юзер = $результатЮзеров->fetch_assoc();
 <html>
 
 <head>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<meta charset="utf-8">
-	<title><?= $Headline ?> </title>
-	<link rel="stylesheet" href="css/CSSep.css?t=<?php echo (microtime(true) . rand()); ?>">
 	<link rel="stylesheet" href="css/CSSbti.css">
-	<link rel="stylesheet" href="css/css-all.css">
-	<link rel="stylesheet" href="css/My_framevorke.css">
-	<?php
-	if (isset($_COOKIE['isDarkMode']) && $_COOKIE['isDarkMode'] == "true") {
-		echo '<link rel="stylesheet" href="css/CSSep_Dark.css">';
-	}
-	?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="icons/logo1.png">
+	<?php include 'php_constructor/head.php'; ?>
+
 	<style>
 		.zaivka-lable-card {
 			align-self: flex-start;

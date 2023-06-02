@@ -330,7 +330,7 @@ hr {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(28, 30, 31);
-    max-width: 150px;
+    max-width: 140px;
 
     white-space: nowrap;
     overflow: hidden;
@@ -342,6 +342,7 @@ hr {
     display: flex;
     padding-left: 10px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .cabinet-name-header {
@@ -351,6 +352,10 @@ hr {
     font-weight: 700;
     margin-left: 15px;
     padding-top: 15px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .left-ava:hover .img-ava {
@@ -453,7 +458,8 @@ header {
 }
 
 .body-overflow {
-    width: 100vw;
+    width: calc(100vw - 34px);
+    margin-left: 0px;
 }
 
 .wrap-overflow {

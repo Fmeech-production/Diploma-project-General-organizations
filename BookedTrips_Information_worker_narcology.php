@@ -85,12 +85,28 @@ if ($user['Account-type'] == 0) {
 				<div class="zaivka-info-card"> <?= substr($Заявка['Day'], 8, 2) . "." . substr($Заявка['Day'], 5, 2) . "." . substr($Заявка['Day'], 0, 4) ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Время отправки:</div>
+				<div class="zaivka-lable-card">Предложенное время отправки:</div>
 				<div class="zaivka-info-card"> <?= $Заявка['Start_time'] ?></div>
+			</div>
+			<div class="razdelitel" style="margin: 10px 0 0 15px;">
+				<div class="left">
+					<lable class="main-lable main-inpyt-left">Назначенное время отправки:</lable>
+					<input style="margin: 0px 0 0 5px;" class="main-inpyt  main-inpyt-left" name="Assigned_Start_time" placeholder="" type="time" required disabled value="<?= $Заявка['Assigned_Start_time'] ?>">
+				</div>
+			</div>
+			<div class="razdelitel" style="margin: 10px 0 0 15px;">
+				<div class="left">
+					<lable class="main-lable main-inpyt-left">Фактическое время отправки:</lable>
+					<input style="margin: 0px 0 0 5px;" class="main-inpyt  main-inpyt-left" name="Finish_Start_time" placeholder="" type="time" required disabled value="<?= $Заявка['Finish_Start_time'] ?>">
+				</div>
 			</div>
 			<div class="zaivka-stroka">
 				<div class="zaivka-lable-card">Время возвращения:</div>
-				<div class="zaivka-info-card"> <?= $Заявка['End_time'] ?></div>
+				<div class="zaivka-info-card"> <?php
+												if ($Заявка['End_time'] == 0)
+													echo "ещё не назначено";
+												else echo $Заявка['End_time'];
+												?></div>
 			</div>
 			<div class="zaivka-stroka">
 				<div class="zaivka-lable-card">Количество пассажиров:</div>

@@ -53,7 +53,7 @@ if ($result) {
 	$admin_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= 4");
 	while ($admin = $admin_userS->fetch_object()) {
 		//Отправка письма по почте
-		Mail::PUSHmess($admin->Email, "Заявку на бронирование была создана ($Day в $Start_time c примечанием '$notes')");
+		Mail::PUSHmess($admin->Email, "Заявку на бронирование была создана ($Day в $Start_time c примечанием '$notes') Телефон: $telephone");
 	}
 }
 

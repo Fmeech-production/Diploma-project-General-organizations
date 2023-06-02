@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Включаем буферизацию вывода
 if (isset($_FILES['img_loader'])) {
   // файл был отправлен    
   $range_img = (100+$_POST['range_img'])/100;

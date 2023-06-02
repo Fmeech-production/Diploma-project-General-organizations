@@ -1,13 +1,14 @@
 <?php   //Одобрение бронирования
+ob_start(); // Включаем буферизацию вывода
 include 'conectCOOKIE.php';
 $id = $_POST['id'];
-$Start_time = $_POST['Start_time'];
-$End_time = $_POST['End_time'];
-$Assigned_Start_time = $_POST['Assigned_Start_time'];
-$Finish_Start_time = $_POST['Finish_Start_time'];
-$driver_id = $_POST['drivers'];
-$car_id = $_POST['cars'];
-include_once 'php_constructor\library.php';
+$Start_time = isset($_POST['Start_time']) ? $_POST['Start_time'] : 0;
+$End_time = isset($_POST['End_time']) ? $_POST['End_time'] : 0;
+$Assigned_Start_time = isset($_POST['Assigned_Start_time']) ? $_POST['Assigned_Start_time'] : 0;
+$Finish_Start_time = isset($_POST['Finish_Start_time']) ? $_POST['Finish_Start_time'] : 0;
+$driver_id = isset($_POST['drivers']) ? $_POST['drivers'] : null;
+$car_id = isset($_POST['cars']) ? $_POST['cars'] : 0;
+include_once 'php_constructor' . DIRECTORY_SEPARATOR . 'library.php';
 $BookingLog = new BookingLog($mysql);
 
 //Если нажата кнопка "Одобрить" заявку на бронирование, нажимается - сотрудником ахч

@@ -34,6 +34,7 @@ $nav_select = 2.5;
 <head>
 	<?php include 'php_constructor/head.php'; ?>
 	<link rel="stylesheet" href="css/My_framevorke.css">
+	<link rel="stylesheet" href="css/CSSbti.css">
 </head>
 
 
@@ -377,20 +378,39 @@ $nav_select = 2.5;
 					<div class="zaivka-lable-card">Статус заявки:</div>
 					<div class="zaivka-info-card color-green"> Завершена</div>
 				</div>
-				<?php
-				$driver = $mysql->query("SELECT  drivers.*, users.*, cars.*, drivers.id as id
-					FROM drivers
-					LEFT JOIN users ON drivers.user_id = users.id
-					LEFT JOIN cars ON drivers.car_id = cars.id
-					WHERE drivers.id = " . $Заявка['driver_id']);
-
-				$driver = $driver->fetch_assoc();
-				?>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Водитель:</div>
-					<div class="zaivka-info-card"> <?= $driver['SName'] . " " . $driver['Name'] . " " . $driver['PName'] ?></div>
-				</div>
-				<?php history($mysql, $Заявка); ?>
+						<div class="zaivka-lable-card">Автомобиль:</div>
+						<div class="zaivka-info-card color-green">
+							<?php
+							$carName = Car::getNameCar($Заявка['car_id']);
+							if ($carName != "")
+								echo $carName;
+							else
+								echo "Автомобиль не выбран";
+							?>
+						</div>
+					</div>
+					<?php
+					$driverID = $Заявка['driver_id'];
+
+					$driver = $mysql->query("SELECT * FROM users WHERE id = $driverID");
+
+					$driver = $driver->fetch_assoc();
+					?>
+					<div class="zaivka-stroka">
+						<div class="zaivka-lable-card">Водитель:</div>
+						<div class="zaivka-info-card">
+							<?php
+							if ($driverID == 0 || $driverID == null) {
+								echo "Водитель не выбран";
+							} else {
+								echo $driver['SName'] . " " . $driver['Name'] . " " . $driver['PName'];
+							}
+							?>
+
+						</div>
+					</div>
+					<?php history($mysql, $Заявка); ?>
 
 				<button class="form-btn" onclick="window.location.href = 'all_Bookeds.php';">Назад</button>
 

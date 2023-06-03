@@ -94,7 +94,7 @@ $nav_select = 2.7;
 						</div>
 					</div>
 					<div title="<?php echo $row['description'] ?>" class="zaivka-status"><?= $status_text ?> <span class="mini-circle"></span><?= $time_has_passed ?></div>
-					<div  title="<?php echo $row['description'] ?>" class="zaivka-description"><?= $row['description'] ?></div>
+					<div  title="<?php echo $row['description'] ?>" class="zaivka-description"><?= $row['new_message'] ?></div>
 				</div>
 			<?php
 			}

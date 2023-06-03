@@ -14,7 +14,7 @@ $current_time = date("Y-m-d H:i:s");
 
 
 // Сохраняем данные в БД
-$sql = "INSERT INTO topics (sender_id, date, description, mini_topic, department_id, room_id) VALUES ('$userId', '$current_time', '$problem_description', '$topic', '$department_id', '$room_id')";
+$sql = "INSERT INTO topics (sender_id, date, description, mini_topic, department_id, room_id, new_message) VALUES ('$userId', '$current_time', '$problem_description', '$topic', '$department_id', '$room_id', '$problem_description')";
 $result = $mysql->query($sql);
 
 if ($result) {

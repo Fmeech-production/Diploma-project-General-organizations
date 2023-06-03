@@ -78,10 +78,58 @@ $Найденый_юзер = $результатЮзеров->fetch_assoc();
 
 		<?php
 		include 'php_constructor/header.php';
+		if (($Заявка['Statys'] == 1 || $Заявка['Statys'] == 2) && $user['Account-type'] == 2) {
 		?>
 
-		<main class="card">
+			<div data-id="<?php echo $id_booking ?>" class="light_to_the_application">
+				<button class="green_light_to_the_application" onclick="send_the_changed_status_positive()">
+					<img src="icons/check_mark1green.png">
+					<div>Завершить заявку</div>
+				</button>
+				<button class="green_light_to_the_application red_light_to_the_application" onclick="send_the_changed_status_negative()">
+					<img src="icons/closeRed.png">
+					<div>Отклонить заявку</div>
+				</button>
+			</div>
+			<script>
+				function send_the_changed_status_positive() {
+					var id_booking = document.querySelector('.light_to_the_application').getAttribute('data-id');
 
+					var xhr = new XMLHttpRequest();
+					xhr.open('POST', 'php_form/update_status.php', true);
+					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+					xhr.onreadystatechange = function() {
+						if (xhr.readyState === 4 && xhr.status === 200) {
+							// Обработка успешного ответа от сервера
+							console.log(xhr.responseText);
+						}
+					};
+					xhr.send('id=' + id_booking + '&status=3');
+					location.reload();
+					location.reload();
+					location.reload();
+				}
+
+				function send_the_changed_status_negative() {
+					var id_booking = document.querySelector('.light_to_the_application').getAttribute('data-id');
+
+					var xhr = new XMLHttpRequest();
+					xhr.open('POST', 'php_form/update_status.php', true);
+					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+					xhr.onreadystatechange = function() {
+						if (xhr.readyState === 4 && xhr.status === 200) {
+							// Обработка успешного ответа от сервера
+							console.log(xhr.responseText);
+						}
+					};
+					xhr.send('id=' + id_booking + '&status=4');
+					location.reload();
+					location.reload();
+					location.reload();
+				}
+			</script>
+		<?php } ?>
+		<main class="card <?php if (($Заявка['Statys'] == 1 || $Заявка['Statys'] == 2) && $user['Account-type'] == 2) echo "light_to_the_application_main"; ?>">
 			<?php
 
 			if ($user['Account-type'] == 2) {
@@ -186,11 +234,18 @@ $Найденый_юзер = $результатЮзеров->fetch_assoc();
 			container.scrollTop = container.scrollHeight;
 		</script>
 		<form action="message_send.php" method="post" class="Sending_message__container" id="messageForm">
-			<div class="Sending_message" onclick="submitForm()" role="button">
-				<img src="icons/Sending_message4.png" class="Sending_message-img">
-			</div>
-			<input class="chat" placeholder="Введите сообщение" type="text" name="message" id="message" autocomplete="off" maxlength="2000" required>
-			<input name="id_topics" style="display: none;" value="<?php echo $id_booking; ?>">
+			<?php if ($Заявка['Statys'] == 1 || $Заявка['Statys'] == 2) { ?>
+				<div class="Sending_message" onclick="submitForm()" role="button">
+					<img src="icons/Sending_message4.png" class="Sending_message-img">
+				</div>
+				<input class="chat" placeholder="Введите сообщение" type="text" name="message" id="message" autocomplete="off" maxlength="2000" required>
+				<input name="id_topics" style="display: none;" value="<?php echo $id_booking; ?>">
+			<?php } else {
+				if ($Заявка['Statys'] == 3)
+					echo "<div class='Edit_zaivka_statys3'>Заявка $statys_text</div>";
+				else if ($Заявка['Statys'] == 4)
+					echo "<div class='Edit_zaivka_statys3 Edit_zaivka_statys4'>Заявка $statys_text</div>";
+			} ?>
 		</form>
 
 		<script>

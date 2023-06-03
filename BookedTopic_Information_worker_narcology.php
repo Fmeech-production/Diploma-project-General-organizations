@@ -1,4 +1,12 @@
 <?php
+if (!defined('ROOT_DIR'))
+	define('ROOT_DIR', realpath(__DIR__));
+require_once(ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
+
+
+use Fmeech2\ConnectSQL;
+use Fmeech2\ConnectCOOKIE;
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include 'conectCOOKIE.php';
@@ -74,24 +82,33 @@ $Найденый_юзер = $результатЮзеров->fetch_assoc();
 
 		<main class="card">
 
-			<?
+			<?php
 
+			if ($user['Account-type'] == 2) {
+				// пометить что эту заявку читали работники, при первом открытии заявки
+				$result = $mysql->query("UPDATE topics SET Statys = 2 WHERE id = '$id_booking' AND Statys = 1");
+			}
+			// определение текста статуса в зависимости от значения в БД
 			if ($Заявка['Statys'] == 1) {
 				$statys_text = "На рассмотрении";
 				$img_patch = "icons/consideration1.png";
 				$color_circle = "color-icons-grey";
+				$color_read = " color-grey-not-read";
 			} else if ($Заявка['Statys'] == 2) {
-				$statys_text = "Одобрена";
-				$img_patch = "icons/confirmed1.png";
-				$color_circle = "color-icons-green";
+				$statys_text = "Прочитана";
+				$img_patch = "icons/see2.png";
+				$color_circle = "color-icons-grey";
+				$color_read = " ";
 			} else if ($Заявка['Statys'] == 3) {
 				$statys_text = "Завершена";
-				$img_patch = "icons/completed1.png";
-				$color_circle = "color-icons-blue";
+				$img_patch = "icons/check_mark1.png";
+				$color_circle = "color-icons-green";
+				$color_read = " ";
 			} else if ($Заявка['Statys'] == 4) {
 				$statys_text = "Отклонена";
-				$img_patch = "icons/rejected2.png";
+				$img_patch = "icons/close.png";
 				$color_circle = "color-icons-red";
+				$color_read = " ";
 			}
 			?>
 

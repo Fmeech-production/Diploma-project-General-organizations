@@ -17,5 +17,5 @@ function create_default_driver($mysql) {
     $insert_query->execute();
     $driver_id = $mysql->insert_id;
 
-    return $driver_id;
+    return $driver_id; 
 }

@@ -66,17 +66,17 @@
 
                         <div class="error error-login error-desk SNamejs">Фамилия не может быть больше 32 символов</div>
                         <div class="error error-login error-mob SNamejs">Фамилия должна быть короче</div>
-                        <input class="login" id="SName" name="SName" placeholder="Фамилия" type="text" onkeyup="jsERROR('SNamejs','SName')">
+                        <input class="login" id="SName" name="SName" placeholder="Фамилия" type="text" onkeyup="jsERROR('SNamejs','SName',2,32)">
 
                         <div class="error error-newpassword error-desk Namejs">Имя не может быть больше 32 символов
                         </div>
                         <div class="error error-newpassword error-mob Namejs">Имя должно быть короче</div>
-                        <input class="login password" id="Name" name="Name" placeholder="Имя" type="text" onkeyup="jsERROR('Namejs','Name')">
+                        <input class="login password" id="Name" name="Name" placeholder="Имя" type="text" onkeyup="jsERROR('Namejs','Name',2,32)">
 
                         <div class="error error-newpassword2 error-desk PNamejs">Отчество не может быть больше 32
                             символов</div>
                         <div class="error error-newpassword2 error-mob PNamejs">Отчество должно быть короче</div>
-                        <input class="login password" id="PName" name="PName" placeholder="Отчество" type="text" onkeyup="jsERROR('PNamejs','PName')">
+                        <input class="login password" id="PName" name="PName" placeholder="Отчество" type="text" onkeyup="jsERROR('PNamejs','PName',0,32)">
                         <button class="form-btn" type="button" onclick="nextReg()">Продолжить</button>
                     </div>
 
@@ -85,7 +85,7 @@
                         <div class="error error-login error-desk newloginjs">Логин не может быть больше 32 символов
                         </div>
                         <div class="error error-login error-mob newloginjs">Логин должен быть короче</div>
-                        <input class="login" id="newlogin" name="newlogin" placeholder="Придумайте свой логин" type="text" onkeyup="jsERROR('newloginjs','newlogin')">
+                        <input class="login" id="newlogin" name="newlogin" placeholder="Придумайте свой логин" type="text" onkeyup="jsERROR('newloginjs','newlogin',6,32)">
 
                         <div class="error error-newpassword error-desk newpasswordjs">Пароль не может быть больше 32
                             символов</div>

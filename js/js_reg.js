@@ -75,7 +75,7 @@ function logform() {//Появиться окну регистрации
 function nextReg() {
     if (SName.value.length >= 2 && SName.value.length <= 32)
         if (Name.value.length >= 2 && Name.value.length <= 32)
-            if (PName.value.length >= 2 && PName.value.length <= 32) {
+            if (PName.value.length >= 0 && PName.value.length <= 32) {
                 regInput1.display = "none";
                 regInput2.display = "flex";
             }
@@ -102,9 +102,9 @@ function nextReg2() {
         popup2.display = "block";
 }
 
-function jsERROR(Aclass, Aid) {
+function jsERROR(Aclass, Aid,num1,num2) {
     var Aid = document.getElementById(Aid);
-    if (Aid.value.length > 32) {
+    if (Aid.value.length > num2) {
         document.getElementsByClassName(Aclass)[0].style.color = "#D55B44";
         document.getElementsByClassName(Aclass)[1].style.color = "#D55B44";
     }
@@ -114,7 +114,7 @@ function jsERROR(Aclass, Aid) {
     }
 
 
-    if (Aid.value.length >= 6 && Aid.value.length <= 32) {
+    if (Aid.value.length >= num1 && Aid.value.length <= num2) {
         Aid.style.backgroundColor = "rgb(248, 251, 252)";
 
     }

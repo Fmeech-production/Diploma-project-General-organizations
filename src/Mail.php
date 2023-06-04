@@ -39,14 +39,48 @@ class Mail
 			echo 'ОШИБКА: ' . $mail->ErrorInfo;
 		}
 	}
-	public static function PUSHmessByStatus($mess, int $status)
+	public static function PUSHmessByStatus_1($mess, int $status)
 	{
 		$mysql = ConnectSQL::getStaticSQL();
 		//Поиск Работяг ачх по статусу
 		$admin_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= $status");
 		while ($admin = $admin_userS->fetch_object()) {
-			//Отправка письма по почте
-			Mail::PUSHmess($admin->Email, $mess);
+			if ($admin->new_notification1 == 1)
+				//Отправка письма по почте
+				Mail::PUSHmess($admin->Email, $mess);
+		}
+	}
+	public static function PUSHmessByStatus_2($mess, int $status)
+	{
+		$mysql = ConnectSQL::getStaticSQL();
+		//Поиск Работяг ачх по статусу
+		$admin_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= $status");
+		while ($admin = $admin_userS->fetch_object()) {
+			if ($admin->new_notification2 == 1)
+				//Отправка письма по почте
+				Mail::PUSHmess($admin->Email, $mess);
+		}
+	}
+	public static function PUSHmessById_1(int $id_user, $mess)
+	{
+		$mysql = ConnectSQL::getStaticSQL();
+		$user = $mysql->query("SELECT * FROM users WHERE id = $id_user");
+		if ($user) {
+			$userData = $user->fetch_object();
+			//Отправка письма пользователю написавшим эту заявку по айди
+			if ($userData->new_notification1 == 1)
+				Mail::PUSHmess($userData->Email, $mess);
+		}
+	}
+	public static function PUSHmessById_2(int $id_user, $mess)
+	{
+		$mysql = ConnectSQL::getStaticSQL();
+		$user = $mysql->query("SELECT * FROM users WHERE id = $id_user");
+		if ($user) {
+			$userData = $user->fetch_object();
+			//Отправка письма пользователю написавшим эту заявку по айди
+			if ($userData->new_notification2 == 1)
+				Mail::PUSHmess($userData->Email, $mess);
 		}
 	}
 }

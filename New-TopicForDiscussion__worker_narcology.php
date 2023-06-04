@@ -27,7 +27,7 @@ $sql = "INSERT INTO topics (sender_id, date, description, mini_topic, department
 $result = $mysql->query($sql);
 
 	//Отправка письма всем работягам
-	Mail::PUSHmessByStatus("Новая заявка: $problem_description (Тематика проблемы: $topic, Отделение: $department_id, Кабинет $room_id)", 2);
+	Mail::PUSHmessByStatus_2("Новая заявка: $problem_description (Тематика проблемы: $topic, Отделение: $department_id, Кабинет $room_id)", 2);
 
 if ($result) {
   // Данные успешно сохранены

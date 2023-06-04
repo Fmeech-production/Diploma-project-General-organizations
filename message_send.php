@@ -29,18 +29,13 @@ else
 
 if ($user['Account-type'] == 0) {
 	//Отправка письма всем работягам от обычных пользователей
-	Mail::PUSHmessByStatus("Новое сообщение: $message", 2);
+	Mail::PUSHmessByStatus_1("Новое сообщение: $message", 2);
 } else if ($user['Account-type'] == 2) {
 	$topic = $mysql->query("SELECT * FROM topics WHERE id = $id_topics");
 	if ($topic) {
 		$topicData = $topic->fetch_object();
 		$userIDtopic = $topicData->sender_id;
-		$user = $mysql->query("SELECT * FROM users WHERE id = $userIDtopic");
-		if ($user) {
-			$userData = $user->fetch_object();
-			//Отправка письма пользователю написавшим эту заявку
-			Mail::PUSHmess($userData->Email, "Новое сообщение: $message");
-		}
+		Mail::PUSHmessById_2($userIDtopic, "Новое сообщение: $message");
 	}
 }
 

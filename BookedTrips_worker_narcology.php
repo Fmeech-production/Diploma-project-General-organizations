@@ -41,6 +41,13 @@ $nav_select = 2;
 			$количествоЗаявок = mysqli_num_rows($результатЗаявок);
 			$schetchick = 1;
 			$Заявка = $результатЗаявок->fetch_assoc();
+			if ($Заявка == null) {
+				echo "<div style='    display: flex;
+				justify-content: center;
+				margin-top: 10px;
+				font-size: 24px;
+				color: gray;'>Пока нет заявок</div>";
+			}
 			while ($Заявка != null) {
 				if ($Заявка['Statys'] == 1) {
 					$statys_text = "На рассмотрении";

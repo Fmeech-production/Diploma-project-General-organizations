@@ -49,6 +49,13 @@ $nav_select = 2.7;
 				// выборка всех заявок пользователя из БД
 				$result = $mysql->query("SELECT * FROM `topics` WHERE `sender_id` = '$userId' ORDER BY `id` DESC");
 			}
+			if ($result->num_rows === 0) {
+				echo "<div style='    display: flex;
+				justify-content: center;
+				margin-top: 10px;
+				font-size: 24px;
+				color: gray;'>Пока нет заявок</div>";
+			}
 			while ($row = $result->fetch_assoc()) {
 				// определение текста статуса в зависимости от значения в БД
 				if ($row['Statys'] == 1) {

@@ -42,7 +42,7 @@ class Mail
 	public static function PUSHmessByStatus_1($mess, int $status)
 	{
 		$mysql = ConnectSQL::getStaticSQL();
-		//Поиск Работяг ачх по статусу
+		//Поиск Работяг ахо по статусу
 		$admin_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= $status");
 		while ($admin = $admin_userS->fetch_object()) {
 			if ($admin->new_notification1 == 1)
@@ -53,7 +53,7 @@ class Mail
 	public static function PUSHmessByStatus_2($mess, int $status)
 	{
 		$mysql = ConnectSQL::getStaticSQL();
-		//Поиск Работяг ачх по статусу
+		//Поиск Работяг ахо по статусу
 		$admin_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= $status");
 		while ($admin = $admin_userS->fetch_object()) {
 			if ($admin->new_notification2 == 1)

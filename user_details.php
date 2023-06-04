@@ -65,8 +65,8 @@ $nav_select = 2;    // Выбор активного пункта меню
 				<label class="main-lable"><?= $loc['Account_type'] ?></label>
 				<select class="account_type_select" name="account_type">
 					<option value="0" <?php if ($user['Account-type'] == 0) echo 'selected' ?>><?= $loc['Сотрудник наркологии'] ?></option>
-					<option value="1" <?php if ($user['Account-type'] == 1) echo 'selected' ?>><?= $loc['Начальник отдела хозяйственной части'] ?></option>
-					<option value="2" <?php if ($user['Account-type'] == 2) echo 'selected' ?>><?= $loc['Сотрудник отдела хозяйственной части'] ?></option>
+					<option value="1" <?php if ($user['Account-type'] == 1) echo 'selected' ?>><?= $loc['Начальник административно хозяйственного отдела'] ?></option>
+					<option value="2" <?php if ($user['Account-type'] == 2) echo 'selected' ?>><?= $loc['Сотрудник административно хозяйственного отдела'] ?></option>
 					<option value="3" <?php if ($user['Account-type'] == 3) echo 'selected' ?>><?= $loc['Водитель'] ?></option>
 					<option value="4" <?php if ($user['Account-type'] == 4) echo 'selected' ?>><?= $loc['Администратор'] ?></option>
 				</select>
@@ -266,10 +266,10 @@ $nav_select = 2;
 											echo "Сотрудник наркологии";
 											break;
 										case 1:
-											echo "Начальник отдела хозяйственной части";
+											echo "Начальник административно хозяйственного отдела";
 											break;
 										case 2:
-											echo "Сотрудник отдела хозяйственной части";
+											echo "Сотрудник административно хозяйственного отдела";
 											break;
 										case 3:
 											echo "Водитель";
@@ -314,8 +314,8 @@ $nav_select = 2;
 				<label for="account_type">Тип аккаунта</label>
 				<select name="account_type" class="account_type">
 					<option value="0">Сотрудник наркологии</option>
-					<option value="1">Начальник отдела хозяйственной части</option>
-					<option value="2">Сотрудник отдела хозяйственной части</option>
+					<option value="1">Начальник административно хозяйственного отдела</option>
+					<option value="2">Сотрудник административно хозяйственного отдела</option>
 					<option value="3">Водитель</option>
 					<option value="4">Системный-администратор</option>
 				</select>

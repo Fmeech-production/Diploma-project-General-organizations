@@ -7,9 +7,9 @@ if ($user == null) { // Если пользователь не авторизо�
 } else {
 	if ($user['Account-type'] == 0) { // Работник наркологии
 		include 'panel_worker_narcology.php';
-	} else if ($user['Account-type'] == 1) { // Начальник ачх
+	} else if ($user['Account-type'] == 1) { // Начальник ахо
 		include 'panel_HeadOfFacilities.php';
-	} else if ($user['Account-type'] == 2) { // Работник ачх 
+	} else if ($user['Account-type'] == 2) { // Работник ахо административно хозяйственный отдел
 		include 'panel_worker_narcology.php';  //panel_worker_facilities.php
 	} else if ($user['Account-type'] == 3) { // Водитель
 		include 'active_routes__HeadOfFacilities.php'; //panel_driver.php
@@ -101,7 +101,7 @@ switch ($accountType) {
 		$facilitiesHead->showPanel();
 		break;
 	case 2:
-		// Класс для работника ачх
+		// Класс для работника ахо
 		break;
 	case 3:
 		// Класс для водителя

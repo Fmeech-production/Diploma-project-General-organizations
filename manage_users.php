@@ -199,8 +199,8 @@ $result = mysqli_query($mysql, $sql);
 				<label for="account_type">Тип аккаунта</label>
 				<select name="account_type" class="account_type" required>
 					<option value="0">Сотрудник наркологии</option>
-					<option value="1">Начальник отдела хозяйственной части</option>
-					<option value="2">Сотрудник отдела хозяйственной части</option>
+					<option value="1">Начальник административно хозяйственного отдела</option>
+					<option value="2">Сотрудник административно хозяйственного отдела</option>
 					<option value="3">Водитель</option>
 					<option value="4">Администратор</option>
 				</select>

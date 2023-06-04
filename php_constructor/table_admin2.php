@@ -101,10 +101,10 @@ function table_admin2($SQL_zapros, $mysql)
 						$account_type = "Сотрудник наркологии";
 						break;
 					case 1:
-						$account_type = "Начальник отдела хозяйственной части";
+						$account_type = "Начальник административно хозяйственного отдела";
 						break;
 					case 2:
-						$account_type = "Сотрудник отдела хозяйственной части";
+						$account_type = "Сотрудник административно хозяйственного отдела";
 						break;
 					case 3:
 						$account_type = "Водитель";
@@ -159,10 +159,10 @@ function table_admin2($SQL_zapros, $mysql)
 													echo "account-type-0'>Сотрудник наркологии";
 													break;
 												case 1:
-													echo "account-type-1'>Начальник отдела хозяйственной части";
+													echo "account-type-1'>Начальник административно хозяйственного отдела";
 													break;
 												case 2:
-													echo "account-type-2'>Сотрудник отдела хозяйственной части";
+													echo "account-type-2'>Сотрудник административно хозяйственного отдела";
 													break;
 												case 3:
 													echo "account-type-3'>Водитель";
@@ -273,10 +273,10 @@ function table_admin2($SQL_zapros, $mysql)
 															echo "account-type-0'>Сотрудник наркологии";
 															break;
 														case 1:
-															echo "account-type-1'>Начальник отдела хозяйственной части";
+															echo "account-type-1'>Начальник административно хозяйственного отдела";
 															break;
 														case 2:
-															echo "account-type-2'>Сотрудник отдела хозяйственной части";
+															echo "account-type-2'>Сотрудник административно хозяйственного отдела";
 															break;
 														case 3:
 															echo "account-type-3'>Водитель";

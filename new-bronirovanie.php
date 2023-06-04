@@ -50,7 +50,7 @@ if ($result) {
 	//Добавление записи в логи
 	$BookingLog->addLog($id, "Заявку на бронирование была создана ($Day в $Start_time c примечанием $notes)", $user->id);
 
-	//Поиск Работяг ачх
+	//Поиск Работяг ахо
 	//$rabotaga_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= 4");
 	//while ($admin = $rabotaga_userS->fetch_object()) {
 	//	//Отправка письма по почте

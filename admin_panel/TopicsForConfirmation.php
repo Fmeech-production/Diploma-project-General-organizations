@@ -22,11 +22,11 @@ $nav_select = 1;    //Выбор активного пункта меню
 
 <body>
     <div class="Редактор-отделений">
-        <div class="lable">Редактор мини-тем</div>
+        <div class="lable"><?= $loc['Редактор мини-тем'] ?></div>
         <div class="выбор-отделений">
 
             <select id="department" class="select-выбор-отделений">
-                <option value="none">Выберите тему</option>
+                <option value="none"><?= $loc['Выберите тему'] ?></option>
                 <?php
                 $sql = "SELECT * FROM themes";
                 $result = mysqli_query($mysql, $sql);
@@ -36,11 +36,11 @@ $nav_select = 1;    //Выбор активного пункта меню
                 mysqli_close($mysql);
                 ?>
             </select>
-            <button class="Удалить" name="submit_button" value="button1" id="button1" onclick="delete_department()">Удалить</button>
+            <button class="Удалить" name="submit_button" value="button1" id="button1" onclick="delete_department()"><?= $loc['Удалить'] ?></button>
         </div>
         <div class="Добавить-отделение">
-            <input placeholder="Добавить новую тему" id="new_department_name">
-            <button class="Кнопка-Добавить-отделение" name="submit_button" value="button2" id="button2" onclick="add_department()">Добавить</button>
+            <input placeholder="<?= $loc['Добавить новую тему'] ?>" id="new_department_name">
+            <button class="Кнопка-Добавить-отделение" name="submit_button" value="button2" id="button2" onclick="add_department()"><?= $loc['Добавить'] ?></button>
         </div>
     </div>
 

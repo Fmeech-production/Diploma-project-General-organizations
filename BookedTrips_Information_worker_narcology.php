@@ -55,53 +55,53 @@ if ($user['Account-type'] == 0) {
 			<?
 
 			if ($Заявка['Statys'] == 1) {
-				$statys_text = "На рассмотрении";
+				$statys_text = $loc['На рассмотрении'];
 				$img_patch = "icons/consideration1.png";
 				$color_circle = "color-icons-grey";
 			} else if ($Заявка['Statys'] == 2) {
-				$statys_text = "Одобрена";
+				$statys_text = $loc['Прочитана'];
 				$img_patch = "icons/confirmed1.png";
 				$color_circle = "color-icons-green";
 			} else if ($Заявка['Statys'] == 3) {
-				$statys_text = "Завершена";
+				$statys_text = $loc['Завершена'] ;
 				$img_patch = "icons/completed1.png";
 				$color_circle = "color-icons-blue";
 			} else if ($Заявка['Statys'] == 4) {
-				$statys_text = "Отклонена";
+				$statys_text = $loc['Отклонена'];
 				$img_patch = "icons/rejected2.png";
 				$color_circle = "color-icons-red";
 			}
 			?>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Место отправки:</div>
+				<div class="zaivka-lable-card"> <?= $loc['Место отправки:'] ?></div>
 				<div class="zaivka-info-card"> <?= $Заявка['Start_road'] ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Место прибытия:</div>
+				<div class="zaivka-lable-card"><?= $loc['Место прибытия:'] ?></div>
 				<div class="zaivka-info-card"> <?= $Заявка['End_road'] ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Дата отправки:</div>
+				<div class="zaivka-lable-card"><?= $loc['Дата отправки:'] ?></div>
 				<div class="zaivka-info-card"> <?= substr($Заявка['Day'], 8, 2) . "." . substr($Заявка['Day'], 5, 2) . "." . substr($Заявка['Day'], 0, 4) ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Предложенное время отправки:</div>
+				<div class="zaivka-lable-card"><?= $loc['Предложенное время отправки:'] ?></div>
 				<div class="zaivka-info-card"> <?= $Заявка['Start_time'] ?></div>
 			</div>
 			<div class="razdelitel" style="margin: 10px 0 0 15px;">
 				<div class="left">
-					<lable class="main-lable main-inpyt-left">Назначенное время отправки:</lable>
+					<lable class="main-lable main-inpyt-left"><?= $loc['Назначенное время отправки:'] ?></lable>
 					<input style="margin: 0px 0 0 5px;" class="main-inpyt  main-inpyt-left" name="Assigned_Start_time" placeholder="" type="time" required disabled value="<?= $Заявка['Assigned_Start_time'] ?>">
 				</div>
 			</div>
 			<div class="razdelitel" style="margin: 10px 0 0 15px;">
 				<div class="left">
-					<lable class="main-lable main-inpyt-left">Фактическое время отправки:</lable>
+					<lable class="main-lable main-inpyt-left"><?= $loc['Фактическое время отправки:'] ?></lable>
 					<input style="margin: 0px 0 0 5px;" class="main-inpyt  main-inpyt-left" name="Finish_Start_time" placeholder="" type="time" required disabled value="<?= $Заявка['Finish_Start_time'] ?>">
 				</div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Время возвращения:</div>
+				<div class="zaivka-lable-card"><?= $loc['Время возвращения:'] ?></div>
 				<div class="zaivka-info-card"> <?php
 												if ($Заявка['End_time'] == 0)
 													echo "ещё не назначено";
@@ -109,22 +109,22 @@ if ($user['Account-type'] == 0) {
 												?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Количество пассажиров:</div>
+				<div class="zaivka-lable-card"><?= $loc['Количество пассажиров:'] ?></div>
 				<div class="zaivka-info-card"> <?= $Заявка['Number_people'] ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Статус заявки:</div>
+				<div class="zaivka-lable-card"><?= $loc['Статус заявки:'] ?></div>
 				<div class="zaivka-info-card"> <?= $statys_text ?></div>
 			</div>
 
 			<?php if ($user['Account-type'] == 0) { ?>
-				<button class="form-btn" onclick="window.location.href = 'BookedTrips_worker_narcology.php';">Назад</button>
+				<button class="form-btn" onclick="window.location.href = 'BookedTrips_worker_narcology.php';"><?= $loc['Назад'] ?></button>
 			<?php } else if ($user['Account-type'] == 1) { ?>
-				<button class="form-btn" onclick="window.location.href = 'active_routes__HeadOfFacilities.php';">Назад</button>
+				<button class="form-btn" onclick="window.location.href = 'active_routes__HeadOfFacilities.php';"><?= $loc['Назад'] ?></button>
 			<?php } else if ($user['Account-type'] == 2) { ?>
-				<button class="form-btn" onclick="window.location.href = 'BookedTrips_worker_narcology.php';">Назад</button>
+				<button class="form-btn" onclick="window.location.href = 'BookedTrips_worker_narcology.php';"><?= $loc['Назад'] ?></button>
 			<?php } else if ($user['Account-type'] == 3) { ?>
-				<button class="form-btn" onclick="window.location.href = 'active_routes__HeadOfFacilities.php';">Назад</button>
+				<button class="form-btn" onclick="window.location.href = 'active_routes__HeadOfFacilities.php';"><?= $loc['Назад'] ?></button>
 			<?php } ?>
 
 

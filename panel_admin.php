@@ -33,19 +33,19 @@ $nav_select = 1;    //Выбор активного пункта меню
                     <div class="square" onclick="open_edit_admin('popup-admin','backgroung-black-active','iframe-admin')">
                         <div class="icon">
                             <img class="icon-admin" src="icons/office1.png">
-                            <div class="text">Отделения и кабинеты</div>
+                            <div class="text"> <?= $loc['Отделения и кабинеты'] ?></div>
                         </div>
                     </div>
                     <div class="square" onclick="open_edit_admin('popup-admin4','backgroung-black-active4','iframe-admin4')">
                         <div class="icon">
                             <img class="icon-admin" src="icons/list_of_topics2.png">
-                            <div class="text">Редактор мини-тем</div>
+                            <div class="text"><?= $loc['Редактор мини-тем'] ?></div>
                         </div>
                     </div>
                     <div class="square" onclick="open_edit_admin('popup-admin2','backgroung-black-active2','iframe-admin2')">
                         <div class="icon">
                             <img class="icon-admin icon-admin2" src="icons/lock1.png">
-                            <div class="text">Секретный ключ</div>
+                            <div class="text"><?= $loc['Секретный ключ'] ?></div>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ $nav_select = 1;    //Выбор активного пункта меню
                     <div class="square" onclick="open_edit_admin('popup-admin3','backgroung-black-active3','iframe-admin3')">
                         <div class="icon">
                             <img class="icon-admin icon-admin2" src="icons/privacy_policy1.png">
-                            <div class="text">Политика конфиденциальности</div>
+                            <div class="text"><?= $loc['Политика конфиденциальности'] ?></div>
                         </div>
                     </div>
                 </div>

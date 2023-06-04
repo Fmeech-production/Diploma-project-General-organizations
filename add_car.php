@@ -4,11 +4,17 @@ $car_id = create_default_car($mysql);
 // Перенаправление на страницу с информацией об автомобиле
 header("Location: edit_car.php?car_id={$car_id}");
 
+
 function create_default_car($mysql) {
+    if ($_COOKIE['language'] == 'eng')
+    include 'php_constructor/localization/localization_eng.php';
+else
+    include 'php_constructor/localization/localization_ru.php';
+
     // Вставка автомобиля со стандартными настройками в базу данных
     $default_license_plate = "A 000 AA 30";
-    $default_make = "Не указано";
-    $default_model = "Не указано";
+    $default_make = $loc['Все заявки'];
+    $default_model = $loc['Не указано']; 
     $default_year = "0000";
     $default_car_image = "1.jpg";
 

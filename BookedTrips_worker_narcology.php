@@ -43,19 +43,19 @@ $nav_select = 2;
 			$Заявка = $результатЗаявок->fetch_assoc();
 			while ($Заявка != null) {
 				if ($Заявка['Statys'] == 1) {
-					$statys_text = "На рассмотрении";
+					$statys_text = $loc['На рассмотрении'];
 					$img_patch = "icons/consideration1.png";
 					$color_circle = "color-icons-grey";
 				} else if ($Заявка['Statys'] == 2) {
-					$statys_text = "Одобрена";
+					$statys_text = $loc['Прочитана'];
 					$img_patch = "icons/confirmed1.png";
 					$color_circle = "color-icons-green";
 				} else if ($Заявка['Statys'] == 3) {
-					$statys_text = "Завершена";
+					$statys_text = $loc['Завершена'] ;
 					$img_patch = "icons/completed1.png";
 					$color_circle = "color-icons-blue";
 				} else if ($Заявка['Statys'] == 4) {
-					$statys_text = "Отклонена";
+					$statys_text = $loc['Отклонена'];
 					$img_patch = "icons/rejected2.png";
 					$color_circle = "color-icons-red";
 				}
@@ -63,13 +63,13 @@ $nav_select = 2;
 				$time_has_passed = time() - $Заявка['Time_of_change'];
 
 				if ($time_has_passed > 60 * 60 * 24)
-					$time_has_passed = floor($time_has_passed / 60 / 60 / 24) . " дней назад";
+					$time_has_passed = floor($time_has_passed / 60 / 60 / 24) . $loc['дней назад']  ;
 				else if ($time_has_passed > 60 * 60)
-					$time_has_passed = floor($time_has_passed / 60 / 60) . " часов назад";
+					$time_has_passed = floor($time_has_passed / 60 / 60) .  $loc['часов назад'] ;
 				else if ($time_has_passed > 60)
-					$time_has_passed = floor($time_has_passed / 60) . " минут назад";
+					$time_has_passed = floor($time_has_passed / 60) .  $loc['минут назад'] ;
 				else if ($time_has_passed > 0)
-					$time_has_passed = $time_has_passed . " секунд назад";
+					$time_has_passed = $time_has_passed .   $loc['секунд назад'];
 
 
 			?>

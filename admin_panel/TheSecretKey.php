@@ -22,16 +22,16 @@ $nav_select = 1;    //Выбор активного пункта меню
 
 <body>
     <div class="Редактор-отделений">
-        <div class="lable">Редактор Секретного ключа</div>
+        <div class="lable"><?= $loc['Редактор Секретного ключа'] ?></div>
         <div class="kcfcgh">
 <div class="new_ok">
-                <button name="submit_button" value="button2" id="button2" onclick="save_new_password()">Сохранить новый ключ</button>
+                <button name="submit_button" value="button2" id="button2" onclick="save_new_password()"><?= $loc['Сохранить новый ключ'] ?></button>
                 </div>
             <div class="выбор-паролей">
 
 
-                <button class="Удалить" name="submit_button" value="button1" id="button1" onclick="edit_visible_password()">Посмотреть на ключ</button>
-                <input placeholder="Секретный ключ" id="new_department_name" value="<?php
+                <button class="Удалить" name="submit_button" value="button1" id="button1" onclick="edit_visible_password()"><?= $loc['Посмотреть на ключ'] ?></button>
+                <input placeholder="<?= $loc['Секретный ключ'] ?> " id="new_department_name" value="<?php
                                                                                         $sql = "SELECT * FROM `admin-panel` WHERE `admin-panel`.`id` = 1";
                                                                                         $result = mysqli_query($mysql, $sql);
                                                                                         $row = mysqli_fetch_assoc($result);
@@ -66,6 +66,7 @@ $nav_select = 1;    //Выбор активного пункта меню
             });
         }
         function edit_visible_password(){
+
             if ($('#new_department_name').attr('type') == 'password') {
                 $('#new_department_name').attr('type', 'text');
                 $('#button1').text('Скрыть ключ');

@@ -145,7 +145,7 @@ $result = mysqli_query($mysql, $sql);
 			<script>
 				// При нажатии на кнопку "Удалить"
 				$('.delete-user').on('click', function() {
-					if (!confirm('Вы действительно хотите удалить этого пользователя?')) {
+					if (!confirm(<?= $loc['Вы действительно хотите удалить этого пользователя?'] ?> )) {
 						return;
 					}
 
@@ -158,10 +158,10 @@ $result = mysqli_query($mysql, $sql);
 					}, function(response) {
 						// Обработайте ответ сервера (например, удалите строку из таблицы или выведите сообщение об успехе)
 						if (response.success) {
-							alert('Пользователь успешно удален');
+							alert(<?= $loc['Пользователь успешно удален'] ?>);
 							row.remove();
 						} else {
-							alert('Произошла ошибка при удалении пользователя');
+							alert(<?= $loc['Произошла ошибка при удалении пользователя'] ?>);
 						}
 					}, 'json');
 				});
@@ -174,35 +174,35 @@ $result = mysqli_query($mysql, $sql);
 
 			<!-- Форма добавления нового пользователя -->
 			<form id="add-user-form" method="post">
-				<label for="login">Логин</label>
+				<label for="login"><?= $loc['Логин'] ?></label>
 				<input type="text" name="login" required>
 
-				<label for="password">Пароль</label>
+				<label for="password"><?= $loc['Пароль'] ?></label>
 				<input type="password" name="password" required>
 
 				<!-- и так далее для всех полей -->
-				<label for="sName">Фамилия</label>
+				<label for="sName"><?= $loc['Фамилия'] ?></label>
 				<input type="text" name="sName">
 
-				<label for="name">Имя</label>
+				<label for="name"><?= $loc['Имя'] ?></label>
 				<input type="text" name="name">
 
-				<label for="pName">Отчество</label>
+				<label for="pName"><?= $loc['Отчество'] ?></label>
 				<input type="text" name="pName">
 
-				<label for="email">Email</label>
+				<label for="email"><?= $loc['Email'] ?></label>
 				<input type="email" name="email">
 
-				<label for="phone">Телефон</label>
+				<label for="phone"><?= $loc['Телефон'] ?></label>
 				<input type="text" name="phone">
 
-				<label for="account_type">Тип аккаунта</label>
+				<label for="account_type"><?= $loc['Тип аккаунта'] ?></label>
 				<select name="account_type" class="account_type" required>
-					<option value="0">Сотрудник наркологии</option>
-					<option value="1">Начальник отдела хозяйственной части</option>
-					<option value="2">Сотрудник отдела хозяйственной части</option>
-					<option value="3">Водитель</option>
-					<option value="4">Администратор</option>
+					<option value="0"><?= $loc['Сотрудник наркологии'] ?></option>
+					<option value="1"><?= $loc['Начальник отдела хозяйственной части'] ?></option>
+					<option value="2"><?= $loc['Сотрудник отдела хозяйственной части'] ?></option>
+					<option value="3"><?= $loc['Водитель'] ?></option>
+					<option value="4"><?= $loc['Администратор'] ?></option>
 				</select>
 
 
@@ -221,10 +221,10 @@ $result = mysqli_query($mysql, $sql);
 					$.post('add_user.php', formData, function(response) {
 						// Обработайте ответ сервера (например, добавьте новую строку в таблицу или выведите сообщение об успехе)
 						if (response.success) {
-							alert('Пользователь успешно добавлен');
+							alert(<?= $loc['Пользователь успешно добавлен'] ?>);
 							location.reload(); // перезагрузка страницы для обновления данных в таблице
 						} else {
-							alert('Произошла ошибка при добавлении нового пользователя');
+							alert(<?= $loc['Произошла ошибка при добавлении нового пользователя'] ?>);
 						}
 					}, 'json');
 				});

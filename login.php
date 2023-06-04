@@ -40,8 +40,8 @@
                 <p class="Hello">Приветствуем вас!</p>
                 <p class="Hello podpis"><!--Система подачи заявок о неисправностях--> Система бронирования автомобилей</p>
                 <div class="contener-input">
-                    <input class="login" id="login" name="login" placeholder="Логин" type="text">
-                    <input class="login password" id="password" name="password" placeholder="Пароль" type="password">
+                    <input class="login" id="login" name="login" placeholder="<?= $loc['Логин'] ?>" type="text">
+                    <input class="login password" id="password" name="password" placeholder="<?= $loc['Пароль'] ?>" type="password">
                     <input style="display: none;" id="zapomnit" name="zapomnit" value="NOzapomnit" type="text">
                     <div class="box-acktiv">
                         <div class="acktiv1 flex relative"><img onclick="rememberMeFunc()" src="icons/check_mark3.png" id="rememberMeImg">

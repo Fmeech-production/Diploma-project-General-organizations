@@ -51,7 +51,7 @@ $nav_select = 2.3;    // Выбор активного пункта меню
                     <div class="right_text_car">
                         <h2 class="car_make"><?= $driver['SName'] . ' ' . $driver['Name'] . ' ' . $driver['PName'] ?></h2>
                         <p class="car_year"><?php echo $driver['make']; ?></p>
-                        <div class="car_license_plate"><div>Регистрационный номер: </div><div><?= $driver['license_plate'] ?></div>
+                        <div class="car_license_plate"><div><?= $loc['Регистрационный номер:'] ?></div><div><?= $driver['license_plate'] ?></div>
                         </div>
                     </div>
                 </div>

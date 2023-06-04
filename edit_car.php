@@ -61,21 +61,21 @@ $nav_select = 2.2;    // Выбор активного пункта меню
 				<div class="img_car">
 					<img src="cars/<?php echo $car['id']; ?>/<?php echo $car['car_image']; ?>" alt="фото автомобиля" class="cover">
 				</div>
-				<h1 style="width: 100%;">Информация об автомобиле</h1>
-				<lable class="main-lable">Водители этого автомобиля:</lable>
+				<h1 style="width: 100%;"><?= $loc['Информация об автомобиле'] ?> </h1>
+				<lable class="main-lable"><?= $loc['Водители этого автомобиля:'] ?> </lable>
 				<div class="main-list">
 					<?php
 					echo Car::DriversIdName($car['drivers_id']);
 					?>
 				</div>
-				<lable class="main-lable">Добавить нового водителя для этой машины</lable>
+				<lable class="main-lable"><?= $loc['Добавить нового водителя для этой машины'] ?> </lable>
 				<select class="main-select main-select-2" placeholder="<?php echo $loc['Optional_field'] ?>" name="drivers_id">
 					<?php
 					echo Car::DriversIdOption($car['drivers_id']);
 					?>
 				</select>
 				<button id="new_draiver_in_car" type="button">
-					Добавить нового водителя
+				<?= $loc['Добавить нового водителя'] ?> 
 				</button>
 
 				<script>
@@ -91,7 +91,7 @@ $nav_select = 2.2;    // Выбор активного пункта меню
 									car_id: car_id
 								},
 								beforeSend: function() {
-									console.log('Запрос на обновление водителей отправлен!');
+									console.log(	<?= $loc['Запрос на обновление водителей отправлен!'] ?> );
 									$('.main-list').html('<img src="img/loading.gif" style="margin: auto; display: flex;">');
 								},
 								success: function(result) {
@@ -99,7 +99,7 @@ $nav_select = 2.2;    // Выбор активного пункта меню
 									$('select.main-select-2 option[value="' + drivers_id + '"]').remove();
 								},
 								error: function(result) {
-									alert('Ошибка!');
+									alert(<?= $loc['Ошибка'] ?>);
 								}
 							});
 						});
@@ -113,7 +113,7 @@ $nav_select = 2.2;    // Выбор активного пункта меню
 							var driverName = $(this).text();
 
 							// Выводим окно подтверждения перед удалением
-							if (confirm("Вы действительно хотите удалить водителя для этой машины " + driverName + "?")) {
+							if (confirm(<?= $loc['Вы действительно хотите удалить водителя для этой машины'] ?> + driverName + "?")) {
 								$.ajax({
 									type: 'POST',
 									url: 'php_constructor/delete_driver_from_car.php',
@@ -123,7 +123,7 @@ $nav_select = 2.2;    // Выбор активного пункта меню
 									},
 									beforeSend: function() {
 										// Код, который нужно выполнить перед отправкой запроса
-										console.log('Запрос на УДАЛЕНИЕ водителей отправлен!');
+										console.log(<?= $loc['Запрос на УДАЛЕНИЕ водителей отправлен!'] ?>);
 										$('.main-list').html('<img src="img/loading.gif" style="margin: auto; display: flex;">');
 									},
 									success: function(result) {
@@ -136,20 +136,20 @@ $nav_select = 2.2;    // Выбор активного пункта меню
 										// Код, который нужно выполнить после получения ответа от сервера
 									},
 									error: function(result) {
-										alert('Ошибка!');
+										alert(<?= $loc['Ошибка'] ?>);
 									}
 								});
 							}
 						});
 					});
 				</script>
-				<lable class="main-lable">Марка</lable>
+				<lable class="main-lable"> <?= $loc['Марка'] ?></lable>
 				<input class="main-inpyt" placeholder="<?php echo $loc['Required_field_to_fill_in'] ?>" value="<?php echo $car['make'] ?>" name="make">
-				<lable class="main-lable">Модель</lable>
+				<lable class="main-lable"> <?= $loc['Модель'] ?></lable>
 				<input class="main-inpyt" placeholder="<?php echo $loc['Required_field_to_fill_in'] ?>" value="<?php echo $car['model'] ?>" name="model">
-				<lable class="main-lable">Год выпуска</lable>
+				<lable class="main-lable"> <?= $loc['Год выпуска'] ?></lable>
 				<input class="main-inpyt" placeholder="<?php echo $loc['Required_field_to_fill_in'] ?>" value="<?php echo $car['year'] ?>" name="year">
-				<lable class="main-lable">Регистрационный номер</lable>
+				<lable class="main-lable"><?= $loc['Регистрационный номер'] ?></lable>
 				<input class="main-inpyt" placeholder="<?php echo $loc['Required_field_to_fill_in'] ?>" value="<?php echo $car['license_plate'] ?>" name="license_plate">
 
 				<!-- Далее идут скрытые поля, которые необходимы для отправки данных -->
@@ -159,17 +159,17 @@ $nav_select = 2.2;    // Выбор активного пункта меню
 			</form>
 			<form action="php_constructor/upload_car_cover.php?car_id=<?= $car_id ?>" method="post" enctype="multipart/form-data" id="upload_cover_form" class="form_car_knopka">
 
-				<lable class="main-lable" style="margin-top: 70px;">Загрузить обложку автомобиля</lable>
+				<lable class="main-lable" style="margin-top: 70px;" > <?= $loc['Загрузить обложку автомобиля'] ?></lable>
 				<input type="file" class="main-inpyt car_knopka" name="car_cover" accept="image/*">
 				<!-- Далее идут скрытые поля, которые необходимы для отправки данных -->
 				<input type="hidden" name="car_id" value="<?php echo $car['id'] ?>">
-				<button class="form-btn car_knopka" type="submit" style="margin-top: 10px;">Загрузить обложку</button>
+				<button class="form-btn car_knopka" type="submit" style="margin-top: 10px;"><?= $loc['Загрузить обложку'] ?></button>
 			</form>
 
 			<!-- далее идёт код удаления автомобиля -->
 			<form action="php_constructor/delete_car.php" method="post" id="block2" class="form_car_knopka">
 				<input type="hidden" name="car_id" value="<?php echo $car['id'] ?>">
-				<button class="form-btn car_knopka" type="submit" style="margin-top: 10px; background-color: #ff0000;">Удалить автомобиль</button>
+				<button class="form-btn car_knopka" type="submit" style="margin-top: 10px; background-color: #ff0000;"><?= $loc['Удалить автомобиль'] ?></button>
 			</form>
 
 		</main>

@@ -22,13 +22,13 @@ $nav_select = 1;    //Выбор активного пункта меню
 
 <body>
     <div class="Редактор-отделений">
-        <div class="lable">Редактор политики конфиденциальности</div>
+        <div class="lable"><?= $loc['Редактор политики конфиденциальности'] ?></div>
         <div class="kcfcgh">
             <div class="выбор-паролей">
 
 
-                <button class="Удалить" name="submit_button" value="button1" id="button1" onclick="save_new_password()">Сохранить политику конфиденциальности</button>
-                <textarea placeholder="Введите новую политику конфиденциальности" id="new_department_name"><?php
+                <button class="Удалить" name="submit_button" value="button1" id="button1" onclick="save_new_password()"><?= $loc['Сохранить политику конфиденциальности'] ?></button>
+                <textarea placeholder="<?= $loc['Введите новую политику конфиденциальности'] ?>" id="new_department_name"><?php
 $sql = "SELECT * FROM `admin-panel` WHERE `admin-panel`.`id` = 1";
 $result = mysqli_query($mysql, $sql);
 $row = mysqli_fetch_assoc($result);
@@ -54,7 +54,7 @@ mysqli_close($mysql);
                 success: function(data) {
                     // Обновление списка отделений
                     showPopup(data, null); //Вывод сообщения об успешном изменении пароля
-                    $('#button1').text("Сохранить политику конфиденциальности еще раз");
+                    $('#button1').text(<?= $loc['Сохранить политику конфиденциальности еще раз"'] ?>);
 
                 },
                 error: function(xhr, status, error) {

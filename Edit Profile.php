@@ -46,7 +46,8 @@ $nav_select = 3;    // Выбор активного пункта меню
 				<lable class="main-lable">*<?= $loc['Name'] ?></lable>
 				<input class="main-inpyt" placeholder="<?= $loc['Required_field_to_fill_in'] ?>" value="<?= $user['Name'] ?>" name="Name">
 				<lable class="main-lable"><?= $loc['Middle_name'] ?></lable>
-				<input class="main-inpyt" placeholder="<?= $loc['Required_field_to_fill_in'] ?>" value="<?= $user['PName'] ?>" name="PName">
+				
+<input class="main-inpyt" placeholder="<?= $loc['Required_field_to_fill_in'] ?>" value="<?= $user['PName'] ?>" name="PName">
 				<lable class="main-lable"><?= $loc['mail'] ?></lable>
 				<input style="margin-bottom:3px;" class="main-inpyt" placeholder="<?= $loc['Optional_field'] ?>" value="<?= $user['Email'] ?>" name="Email">
 				

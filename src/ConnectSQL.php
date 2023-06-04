@@ -15,7 +15,7 @@ class ConnectSQL
     private $mysql;
     function __construct()
     {
-        $this->mysql = new mysqli("192.168.1.36", "root", "", "diplompp"); //подключение к базе данныx
+        $this->mysql = new mysqli("localhost", "root", "", "diplompp"); //подключение к базе данныx
 
 
 
@@ -33,6 +33,6 @@ class ConnectSQL
      */
     public static function getStaticSQL(): mysqli
     {
-        return new mysqli("192.168.1.36", "root", "", "diplompp"); //подключение к базе данныx
+        return new mysqli("localhost", "root", "", "diplompp"); //подключение к базе данныx
     }
 }

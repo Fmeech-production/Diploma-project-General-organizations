@@ -210,7 +210,7 @@ $id_booking = $_GET['id'];
 $результатЗаявок = $mysql->query("SELECT * FROM `booking` WHERE `id` = '$id_booking'");
 $Заявка = $результатЗаявок->fetch_assoc();
 
-$Headline = "Информация о пользователе";
+$Headline =  $loc['Информация о пользователе'] ;
 $nav_select = 2;
 
 
@@ -251,43 +251,43 @@ $nav_select = 2;
 
 
 			<div>
-				<h2>Личные данные</h2>
-				<p>ФИО: <?= $user['SName'] . " " . $user['Name'] . " " . $user['PName'] ?></p>
-				<p>Email: <?= $user['Email'] ?></p>
-				<p>Телефон: <?= $user['Phone'] ?></p>
+				<h2><?= $loc['Личные данные'] ?></h2>
+				<p><?= $loc['ФИО'] ?> <?= $user['SName'] . " " . $user['Name'] . " " . $user['PName'] ?></p>
+				<p><?= $loc['Email:'] ?> <?= $user['Email'] ?></p>
+				<p><?= $loc['Телефон:'] ?> <?= $user['Phone'] ?></p>
 			</div>
 
 			<div>
-				<h2>Данные аккаунта</h2>
-				<p>Логин: <?= $user['Login'] ?></p>
-				<p>Тип аккаунта: <?php
+				<h2><?= $loc['Данные аккаунта'] ?></h2>
+				<p><?= $loc['Логин:'] ?> <?= $user['Login'] ?></p>
+				<p><?= $loc['Тип аккаунта:'] ?> <?php
 									switch ($user['Account-type']) {
 										case 0:
-											echo "Сотрудник наркологии";
+											echo  $loc['Сотрудник наркологии'];
 											break;
 										case 1:
-											echo "Начальник отдела хозяйственной части";
+											echo $loc['Начальник отдела хозяйственной части'];
 											break;
 										case 2:
-											echo "Сотрудник отдела хозяйственной части";
+											echo $loc['Сотрудник отдела хозяйственной части'];
 											break;
 										case 3:
-											echo "Водитель";
+											echo $loc['Водитель'];
 											break;
 										case 4:
-											echo "Системный-администратор";
+											echo $loc['Системный-администратор'];
 											break;
 										default:
-											echo "Неизвестный тип аккаунта";
+											echo $loc['Неизвестный тип аккаунта'];
 									}
 									?></p>
 			</div>
 			<div>
-				<button class="edit-user">Редактировать</button>
-				<button class="delete-user">Удалить</button>
+				<button class="edit-user"><?= $loc['Данные аккаунта'] ?> <?= $loc['Редактировать'] ?></button>
+				<button class="delete-user"><?= $loc['Данные аккаунта'] ?> <?= $loc['Удалить'] ?></button>
 			</div>
 
-
+		
 
 
 
@@ -297,31 +297,31 @@ $nav_select = 2;
 			<form id="edit-user-form" method="post" style="display:none;">
 				<button type="button" class="close-popup">X</button>
 				<input type="hidden" name="id" value="">
-				<label for="login">Логин</label>
+				<label for="login">	<?= $loc['Логин'] ?></label>
 				<input type="text" name="login" value="">
-				<label for="password">Пароль</label>
+				<label for="password">	<?= $loc['Пароль'] ?></label>
 				<input type="text" name="password" value="">
-				<label for="name">Имя</label>
+				<label for="name">	<?= $loc['Имя'] ?></label>
 				<input type="text" name="name" value="">
-				<label for="surname">Фамилия</label>
+				<label for="surname">	<?= $loc['Фамилия'] ?></label>
 				<input type="text" name="surname" value="">
-				<label for="patronymic">Отчество</label>
+				<label for="patronymic">	<?= $loc['Отчество'] ?></label>
 				<input type="text" name="patronymic" value="">
-				<label for="email"> Почта</label>
+				<label for="email"> 	<?= $loc['Почта'] ?></label>
 				<input type="text" name="email" value="">
-				<label for="phone">Телефон</label>
+				<label for="phone">	<?= $loc['Телефон'] ?></label>
 				<input type="text" name="phone" value="">
-				<label for="account_type">Тип аккаунта</label>
+				<label for="account_type">	<?= $loc['Тип аккаунта'] ?></label>
 				<select name="account_type" class="account_type">
-					<option value="0">Сотрудник наркологии</option>
-					<option value="1">Начальник отдела хозяйственной части</option>
-					<option value="2">Сотрудник отдела хозяйственной части</option>
-					<option value="3">Водитель</option>
-					<option value="4">Системный-администратор</option>
+					<option value="0">	<?= $loc['Сотрудник наркологии'] ?></option>
+					<option value="1">	<?= $loc['Начальник отдела хозяйственной части'] ?></option>
+					<option value="2">	<?= $loc['Сотрудник отдела хозяйственной части'] ?></option>
+					<option value="3">	<?= $loc['Водитель'] ?></option>
+					<option value="4">	<?= $loc['Системный-администратор'] ?></option>
 				</select>
 
 
-				<input type="submit" name="update_user" value="Обновить">
+				<input type="submit" name="update_user" value="<?= $loc['Обновить'] ?>">
 			</form>
 
 			<script>
@@ -353,10 +353,10 @@ $nav_select = 2;
 					$.post('update_user.php', formData, function(response) {
 						// Обработайте ответ сервера (например, обновите таблицу или выведите сообщение об успехе)
 						if (response.success) {
-							alert('Информация о пользователе успешно обновлена');
+							alert(<?= $loc['Информация о пользователе успешно обновлена'] ?>);
 							location.reload(); // перезагрузка страницы для обновления данных в таблице
 						} else {
-							alert('Произошла ошибка при обновлении информации о пользователе:');
+							alert(<?= $loc['Произошла ошибка при обновлении информации о пользователе:'] ?>);
 
 						}
 					}, 'json');
@@ -464,7 +464,7 @@ $nav_select = 2;
 			<script>
 				// При нажатии на кнопку "Удалить"
 				$('.delete-user').on('click', function() {
-					if (!confirm('Вы действительно хотите удалить этого пользователя?')) {
+					if (!confirm(<?= $loc['Вы действительно хотите удалить этого пользователя?'] ?>)) {
 						return;
 					}
 
@@ -477,10 +477,10 @@ $nav_select = 2;
 					}, function(response) {
 						// Обработайте ответ сервера (например, удалите строку из таблицы или выведите сообщение об успехе)
 						if (response.success) {
-							alert('Пользователь успешно удален');
+							alert(<?= $loc['Пользователь успешно удален'] ?>);
 							row.remove();
 						} else {
-							alert('Произошла ошибка при удалении пользователя');
+							alert(<?= $loc['Произошла ошибка при удалении пользователя'] ?>);
 						}
 					}, 'json');
 				});

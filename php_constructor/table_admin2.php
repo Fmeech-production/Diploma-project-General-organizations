@@ -1,6 +1,13 @@
 <?php
+if ($_COOKIE['language'] == 'eng')      //Подключение локализации
+    include '../php_constructor/localization/localization_eng.php';
+else
+    include '../php_constructor/localization/localization_ru.php';
 function table_admin2($SQL_zapros, $mysql)
-{
+{if ($_COOKIE['language'] == 'eng')      //Подключение локализации
+    include '../php_constructor/localization/localization_eng.php';
+else
+    include '../php_constructor/localization/localization_ru.php';
 	/**
 	 * @param string $SQL_zapros sql запрос 
 	 * @param mysqli $mysql подключение к базе данных
@@ -13,8 +20,8 @@ function table_admin2($SQL_zapros, $mysql)
 				<input type="checkbox" id="phone-switch-toggle" class="phone-switch-toggle">
 				<label for="phone-switch-toggle" class="phone-switch-label"></label>
 			</div>
-			<div class="slider-text block1">Компактный режим</div>
-			<div class="slider-text-2 block2 hidden">Расширенный режим</div>
+			<div class="slider-text block1"><?= $loc['Компактный режим'] ?></div>
+			<div class="slider-text-2 block2 hidden"><?= $loc['Расширенный режим'] ?></div>
 		</div>
 		<?php
 
@@ -61,7 +68,7 @@ function table_admin2($SQL_zapros, $mysql)
 
 		<div class="block1">
 			<!-- Вставьте ваш код для компактного режима здесь -->
-			<input type="text" id="search" placeholder="Что ищете?" aria-controls="users-table">
+			<input type="text" id="search" placeholder="<?= $loc['Что ищете?'] ?>" aria-controls="users-table">
 			<style>
 				#search {
 					width: calc(100% - 20px - 22px);
@@ -98,22 +105,22 @@ function table_admin2($SQL_zapros, $mysql)
 			while ($user != null) {   // Цикл для отображения всех пользователей
 				switch ($user['Account-type']) {
 					case 0:
-						$account_type = "Сотрудник наркологии";
+						$account_type =$loc['Сотрудник наркологии'] ;
 						break;
 					case 1:
-						$account_type = "Начальник отдела хозяйственной части";
+						$account_type = $loc['Начальник отдела хозяйственной части'] ;
 						break;
 					case 2:
-						$account_type = "Сотрудник отдела хозяйственной части";
+						$account_type = $loc['Сотрудник отдела хозяйственной части'] ;
 						break;
 					case 3:
-						$account_type = "Водитель";
+						$account_type = $loc['Водитель'] ;
 						break;
 					case 4:
-						$account_type = "Системный-администратор";
+						$account_type = $loc['Системный-администратор'] ;
 						break;
 					default:
-						$account_type = "Неизвестный тип аккаунта";
+						$account_type = $loc['Неизвестный тип аккаунта'] ;
 				}
 			?>
 				<div class="user-info" data-fullname="<?= $user['id'] . " " . $user['Login']. " "  . $user['SName'] . " " . $user['Name'] . " " . $user['PName'] . " " . $account_type . " " . $user['Email'] . " " . $user['Phone'] ?>">
@@ -232,15 +239,15 @@ function table_admin2($SQL_zapros, $mysql)
 											<thead>
 												<tr>
 													<th class="id-column">ID</th>
-													<th>Аватар</th>
-													<th>Логин</th>
-													<th>Имя</th>
-													<th>Фамилия</th>
-													<th>Отчество</th>
-													<th>Почта</th>
-													<th>Телефон</th>
-													<th>Тип аккаунта</th>
-													<th>Действия</th>
+													<th> <?= $loc['Аватар'] ?></th>
+													<th><?= $loc['Логин'] ?></th>
+													<th><?= $loc['Имя'] ?></th>
+													<th><?= $loc['Фамилия'] ?></th>
+													<th><?= $loc['Отчество'] ?></th>
+													<th><?= $loc['Почта'] ?></th>
+													<th><?= $loc['Телефон'] ?></th>
+													<th><?= $loc['Тип аккаунта'] ?></th>
+													<th><?= $loc['Действия'] ?></th>
 												</tr>
 											</thead>
 											<tbody>

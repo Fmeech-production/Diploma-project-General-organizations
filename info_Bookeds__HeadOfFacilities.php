@@ -65,30 +65,30 @@ $nav_select = 2.5;
 		// Проверка на статус заявки
 		// 1 - На рассмотрении
 		if ($Заявка['Statys'] == 1) {
-			$statys_text = "На рассмотрении";
+			$statys_text = $loc['На рассмотрении'];
 			$img_patch = "icons/consideration1.png";
 			$color_circle = "color-icons-grey"; ?>
 
 			<main class="card mob_scroll">
 
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Сотрудник:</div>
+					<div class="zaivka-lable-card"><?= $loc['Сотрудник:'] ?></div>
 					<div class="zaivka-info-card"><?= $People['SName'] . " " . $People['Name'] . " " . $People['PName'] ?> </div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Место отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Место отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Start_road'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Место прибытия:</div>
+					<div class="zaivka-lable-card"><?= $loc['Место прибытия:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['End_road'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Дата отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Дата отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= substr($Заявка['Day'], 8, 2) . "." . substr($Заявка['Day'], 5, 2) . "." . substr($Заявка['Day'], 0, 4) ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Желаемое время отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Желаемое время отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Start_time'] ?></div>
 				</div>
 				<!--<div class="zaivka-stroka">
@@ -96,27 +96,27 @@ $nav_select = 2.5;
 					<div class="zaivka-info-card"> <?= $Заявка['End_time'] ?></div>
 				</div>-->
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Количество пассажиров:</div>
+					<div class="zaivka-lable-card"><?= $loc['Количество пассажиров:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Number_people'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;">Примечание:</div>
+					<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;"><?= $loc['Примечание:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['notes'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;">Телефон:</div>
+					<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;"><?= $loc['Телефон:'] ?></div>
 					<div class="zaivka-info-card"> +<?= $Заявка['telephone'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Статус заявки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Статус заявки:'] ?></div>
 					<div class="zaivka-info-card"> <?= $statys_text ?></div>
 				</div>
 				<?php history($mysql, $Заявка); ?>
 				<form class="" style="width: 100%; display:block;" action="Odobreno.php" method="post">
 					<div style="">
-						<lable class="main-lable">Выбрать автомобиль</lable>
+						<lable class="main-lable"><?= $loc['Выбрать автомобиль'] ?></lable>
 						<select class="drivers_select" name="cars" id="cars" required>
-							<option value="" disabled selected>Выберите автомобиль</option>
+							<option value="" disabled selected><?= $loc['Выберите автомобиль'] ?></option>
 							<?php
 							$cars = $mysql->query("SELECT * FROM cars");
 							while ($car = $cars->fetch_assoc()) {
@@ -125,9 +125,9 @@ $nav_select = 2.5;
 							?>
 						</select>
 
-						<lable class="main-lable" style="margin-top: 10px;">Выбрать водителя (не обязательно)</lable>
+						<lable class="main-lable" style="margin-top: 10px;"><?= $loc['Выбрать водителя (не обязательно)'] ?></lable>
 						<select class="drivers_select" name="drivers" id="drivers">
-							<option selected>Сначала выберите машину </option>
+							<option selected><?= $loc['Сначала выберите машину'] ?> </option>
 						</select>
 						<script>
 							$(document).ready(function() {
@@ -142,11 +142,11 @@ $nav_select = 2.5;
 											drivers_idS: drivers_idS
 										},
 										beforeSend: function() {
-											console.log('Запрос на обновление водителей, после выбора машины отправлен!');
+											console.log( <?= $loc['Запрос на обновление водителей, после выбора машины отправлен!'] ?> );
 										},
 										success: function(data) {
 											$('#drivers').html(data);
-											console.log('Пришёл ответ на отправленный запрос.');
+											console.log( <?= $loc['Пришёл ответ на отправленный запрос.'] ?>);
 										}
 									});
 								});
@@ -160,7 +160,7 @@ $nav_select = 2.5;
 
 					<div class="razdelitel" style="margin: 10px 0 0 5px;">
 						<div class="left">
-							<lable class="main-lable main-inpyt-left">Назначить время отправки:</lable>
+							<lable class="main-lable main-inpyt-left"><?= $loc['Назначить время отправки:'] ?></lable>
 							<input style="margin: 0px 0 0 5px;" class="main-inpyt  main-inpyt-left" name="Start_time" placeholder="" type="time" required value="<?= $Заявка['Start_time'] ?>">
 						</div>
 					</div>
@@ -168,8 +168,8 @@ $nav_select = 2.5;
 
 					<div class="flex Odobreno-btn--Otcloneno">
 						<input style="display: none;" value="<?= $Заявка['id'] ?>" name="id">
-						<button class="form-btn-green btn__margin-right" name="submit2">Одобрить</button>
-						<button class="form-btn-red btn__margin-left" name="submit4">Отклонить</button>
+						<button class="form-btn-green btn__margin-right" name="submit2"><?= $loc['Одобрить'] ?></button>
+						<button class="form-btn-red btn__margin-left" name="submit4"><?= $loc['Отклонить'] ?></button>
 					</div>
 				</form>
 				<script>
@@ -193,7 +193,7 @@ $nav_select = 2.5;
 		}
 		// 2 - Одобрена
 		else if ($Заявка['Statys'] == 2) {
-			$statys_text = "Одобрена";
+			$statys_text = $loc['Одобрена'] ;
 			$img_patch = "icons/confirmed1.png";
 			$color_circle = "color-icons-green";
 		?>
@@ -206,21 +206,21 @@ $nav_select = 2.5;
     padding-top: 0;
     display:block;" action="Odobreno.php" method="post">
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Место отправки:</div>
+						<div class="zaivka-lable-card"><?= $loc['Место отправки:'] ?></div>
 						<div class="zaivka-info-card"> <?= $Заявка['Start_road'] ?></div>
 					</div>
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Место прибытия:</div>
+						<div class="zaivka-lable-card"><?= $loc['Место прибытия:'] ?></div>
 						<div class="zaivka-info-card"> <?= $Заявка['End_road'] ?></div>
 					</div>
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Дата отправки:</div>
+						<div class="zaivka-lable-card"><?= $loc['Дата отправки:'] ?></div>
 						<div class="zaivka-info-card"> <?= substr($Заявка['Day'], 8, 2) . "." . substr($Заявка['Day'], 5, 2) . "." . substr($Заявка['Day'], 0, 4) ?></div>
 					</div>
 
 					<div class="razdelitel" style="margin: 10px 0 0 15px;">
 						<div class="left">
-							<lable class="main-lable main-inpyt-left">Назначенное время отправки:</lable>
+							<lable class="main-lable main-inpyt-left"><?= $loc['Назначенное время отправки:'] ?></lable>
 							<input style="margin: 0px 0 0 5px;" class="main-inpyt  main-inpyt-left" name="Assigned_Start_time" placeholder="" type="time" required disabled value="<?= $Заявка['Assigned_Start_time'] ?>">
 						</div>
 					</div>
@@ -229,12 +229,12 @@ $nav_select = 2.5;
 						<div style="margin: 10px 10px;">
 							<div class="razdelitel">
 								<div class="left">
-									<lable class="main-lable main-lable2">Фактическое время отправки:</lable>
+									<lable class="main-lable main-lable2"><?= $loc['Фактическое время отправки:'] ?></lable>
 									<input class="main-inpyt main-inpyt3" placeholder="" type="time" required value="<?= $Заявка['Assigned_Start_time'] ?>" name="Finish_Start_time" style="margin-left: 5px;">
 								</div>
 
 								<div class="right">
-									<lable class="main-lable main-lable2">Фактическое время возвращения:</lable>
+									<lable class="main-lable main-lable2"><?= $loc['Фактическое время возвращения:'] ?> </lable>
 									<input class="main-inpyt main-inpyt3" placeholder="" type="time" required value="<?= $Заявка['End_time'] ?>" name="End_time" style="margin-left: 5px;">
 								</div>
 							</div>
@@ -245,42 +245,42 @@ $nav_select = 2.5;
 					<!--<div style="margin: 10px 10px;">
 						<div class="razdelitel">
 							<div class="left">
-								<lable class="main-lable main-lable2">Назначенное время отправки:</lable>
+								<lable class="main-lable main-lable2"><?= $loc[''] ?>Назначенное время отправки:</lable>
 								<input class="main-inpyt main-inpyt3" placeholder="" type="time" required value="<?= $Заявка['Assigned_Start_time'] ?>" name="Start_time">
 							</div>
 
 							<div class="right">
-								<lable class="main-lable main-lable2">Время возвращения:</lable>
+								<lable class="main-lable main-lable2"> <?= $loc[''] ?>Время возвращения:</lable>
 								<input class="main-inpyt main-inpyt3" placeholder="" type="time" required value="<?= $Заявка['End_time'] ?>" name="End_time">
 							</div>
 						</div>
 					</div>-->
 
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Количество пассажиров:</div>
+						<div class="zaivka-lable-card"><?= $loc['Количество пассажиров:'] ?></div>
 						<div class="zaivka-info-card"> <?= $Заявка['Number_people'] ?></div>
 					</div>
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;">Примечание:</div>
+						<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;"><?= $loc['Примечание:'] ?></div>
 						<div class="zaivka-info-card"> <?= $Заявка['notes'] ?></div>
 					</div>
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;">Телефон:</div>
+						<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;"><?= $loc['Телефон:'] ?></div>
 						<div class="zaivka-info-card"> +<?= $Заявка['telephone'] ?></div>
 					</div>
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Статус заявки:</div>
+						<div class="zaivka-lable-card"><?= $loc['Статус заявки:'] ?></div>
 						<div class="zaivka-info-card color-green"> Одобрена</div>
 					</div>
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Автомобиль:</div>
+						<div class="zaivka-lable-card"><?= $loc['Автомобиль:'] ?></div>
 						<div class="zaivka-info-card color-green">
 							<?php
 							$carName = Car::getNameCar($Заявка['car_id']);
 							if ($carName != "")
 								echo $carName;
 							else
-								echo "Автомобиль не выбран";
+								echo $loc['Автомобиль не выбран'] ;
 							?>
 						</div>
 					</div>
@@ -292,11 +292,11 @@ $nav_select = 2.5;
 					$driver = $driver->fetch_assoc();
 					?>
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Водитель:</div>
+						<div class="zaivka-lable-card"><?= $loc['Водитель:'] ?> </div>
 						<div class="zaivka-info-card">
 							<?php
 							if ($driverID == 0 || $driverID == null) {
-								echo "Водитель не выбран";
+								echo  $loc['Водитель не выбран'] ;
 							} else {
 								echo $driver['SName'] . " " . $driver['Name'] . " " . $driver['PName'];
 							}
@@ -311,7 +311,7 @@ $nav_select = 2.5;
 					<input style="display: none;" value="<?= $Заявка['id'] ?>" name="id">
 					<?php
 					if ($user['Account-type'] == 3) { ?>
-						<button class="form-btn" name="submit3">Подтвердить</button>
+						<button class="form-btn" name="submit3"> <?= $loc['Подтвердить'] ?></button>
 					<?php } else { ?>
 					<?php }
 					?>
@@ -319,7 +319,7 @@ $nav_select = 2.5;
 				</form>
 
 
-
+				
 
 
 			</main>
@@ -328,65 +328,82 @@ $nav_select = 2.5;
 
 		<?php
 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		// 3 - Завершена
 		else if ($Заявка['Statys'] == 3) {
-			$statys_text = "Завершена";
+			$statys_text =  $loc['Завершена'] ;
 			$img_patch = "icons/completed1.png";
 			$color_circle = "color-icons-blue";
 		?>
 			<main class="card mob_scroll">
 
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Сотрудник:</div>
+					<div class="zaivka-lable-card"><?= $loc['Сотрудник:'] ?></div>
 					<div class="zaivka-info-card"> <?= $People['SName'] . " " . $People['Name'] . " " . $People['PName'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Место отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Место отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Start_road'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Место прибытия:</div>
+					<div class="zaivka-lable-card"><?= $loc['Место прибытия:'] ?></div>
 					<div class="zaivka-info-card"><?= $Заявка['End_road'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Дата отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Дата отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= substr($Заявка['Day'], 8, 2) . "." . substr($Заявка['Day'], 5, 2) . "." . substr($Заявка['Day'], 0, 4) ?></div>
 				</div>
 
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Время отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Время отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Finish_Start_time'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Время возвращения:</div>
+					<div class="zaivka-lable-card"><?= $loc['Время возвращения:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['End_time'] ?></div>
 				</div>
 
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Количество пассажиров:</div>
+					<div class="zaivka-lable-card"><?= $loc['Количество пассажиров:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Number_people'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;">Примечание:</div>
+					<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;"><?= $loc['Примечание:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['notes'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;">Телефон:</div>
+					<div class="zaivka-lable-card" style="margin-bottom:auto; margin-top:0;"><?= $loc['Телефон:'] ?></div>
 					<div class="zaivka-info-card"> +<?= $Заявка['telephone'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Статус заявки:</div>
-					<div class="zaivka-info-card color-green"> Завершена</div>
+					<div class="zaivka-lable-card"><?= $loc['Статус заявки:'] ?></div>
+					<div class="zaivka-info-card color-green"> <?= $loc['Завершена'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Автомобиль:</div>
+						<div class="zaivka-lable-card"><?= $loc['Автомобиль:'] ?></div>
 						<div class="zaivka-info-card color-green">
 							<?php
 							$carName = Car::getNameCar($Заявка['car_id']);
 							if ($carName != "")
 								echo $carName;
 							else
-								echo "Автомобиль не выбран";
+								echo  $loc['Автомобиль не выбран'];
 							?>
 						</div>
 					</div>
@@ -398,11 +415,11 @@ $nav_select = 2.5;
 					$driver = $driver->fetch_assoc();
 					?>
 					<div class="zaivka-stroka">
-						<div class="zaivka-lable-card">Водитель:</div>
+						<div class="zaivka-lable-card"><?= $loc['Водитель:'] ?></div>
 						<div class="zaivka-info-card">
 							<?php
 							if ($driverID == 0 || $driverID == null) {
-								echo "Водитель не выбран"; 
+								echo   $loc['Водитель не выбран'] ; 
 							} else {
 								echo $driver['SName'] . " " . $driver['Name'] . " " . $driver['PName'];
 							}
@@ -412,7 +429,7 @@ $nav_select = 2.5;
 					</div>
 					<?php history($mysql, $Заявка); ?>
 
-				<button class="form-btn" onclick="window.location.href = 'all_Bookeds.php';">Назад</button>
+				<button class="form-btn" onclick="window.location.href = 'all_Bookeds.php';"> <?= $loc['Назад'] ?></button>
 
 
 			</main>
@@ -421,48 +438,48 @@ $nav_select = 2.5;
 		}
 		// 4 - Отклонена
 		else if ($Заявка['Statys'] == 4) {
-			$statys_text = "Отклонена";
+			$statys_text =  $loc['Отклонена'] ;
 			$img_patch = "icons/rejected2.png";
 			$color_circle = "color-icons-red";  ?>
 			<main class="card mob_scroll">
 
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Сотрудник:</div>
+					<div class="zaivka-lable-card"><?= $loc['Сотрудник:'] ?></div>
 					<div class="zaivka-info-card"> <?= $People['SName'] . " " . $People['Name'] . " " . $People['PName'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Место отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Место отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Start_road'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Место прибытия:</div>
+					<div class="zaivka-lable-card"><?= $loc['Место прибытия:'] ?>:</div>
 					<div class="zaivka-info-card"><?= $Заявка['End_road'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Дата отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Дата отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Day'] ?></div>
 				</div>
 
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Время отправки:</div>
+					<div class="zaivka-lable-card"><?= $loc['Время отправки:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Start_time'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Время возвращения:</div>
+					<div class="zaivka-lable-card"><?= $loc['Время возвращения:'] ?></div>
 					<div class="zaivka-info-card"> <?= substr($Заявка['Day'], 8, 2) . "." . substr($Заявка['Day'], 5, 2) . "." . substr($Заявка['Day'], 0, 4) ?></div>
 				</div>
 
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Количество пассажиров:</div>
+					<div class="zaivka-lable-card"><?= $loc['Количество пассажиров:'] ?></div>
 					<div class="zaivka-info-card"> <?= $Заявка['Number_people'] ?></div>
 				</div>
 				<div class="zaivka-stroka">
-					<div class="zaivka-lable-card">Статус заявки:</div>
-					<div class="zaivka-info-card color-red"> Отклонена</div>
+					<div class="zaivka-lable-card"><?= $loc['Статус заявки:'] ?></div>
+					<div class="zaivka-info-card color-red"> <?= $loc['Отклонена'] ?></div>
 				</div>
 				<?php history($mysql, $Заявка); ?>
 
-				<button class="form-btn" onclick="window.location.href = 'all_Bookeds.php';">Назад</button>
+				<button class="form-btn" onclick="window.location.href = 'all_Bookeds.php';"><?= $loc['Назад'] ?></button>
 
 
 			</main>
@@ -494,6 +511,11 @@ function history($mysql, $Заявка)
 		<div class="zaivka-lable-card" style="margin-left: auto; margin-right: 10px; text-align: right; cursor:help;" title="
 <?php
 
+if ($_COOKIE['language'] == 'eng')
+	include 'php_constructor/localization/localization_eng.php';
+else
+	include 'php_constructor/localization/localization_ru.php';
+
 	$history = $mysql->query("SELECT  booking_log.*, users.*, booking_log.id as id
 FROM `booking_log`
 LEFT JOIN users ON booking_log.user_id = users.id
@@ -506,7 +528,8 @@ WHERE booking_log.booking_id = " . $Заявка['id']);
 	while ($log = $history->fetch_assoc()) {
 		echo $Day = date('d.m.y в H:i', strtotime($log['time'])) . " - " . $log['action'] . "  |  " . $log['SName'] . " " . $log['Name'] . " " . $log['PName']  . "\n";
 	}
-?>">История изменений этой заявки</div>
+?>"> <?= $loc['История изменений этой заявки'] ?></div>
 	</div>
 <?php
 }
+	

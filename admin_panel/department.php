@@ -22,11 +22,11 @@ $nav_select = 1;    //Выбор активного пункта меню
 
 <body>
     <div class="Редактор-отделений">
-        <div class="lable">Редактор отделений</div>
+        <div class="lable"><?= $loc['Редактор отделений'] ?></div>
         <div class="выбор-отделений">
 
             <select id="department" class="select-выбор-отделений">
-                <option value="none">Выберите отделение</option>
+                <option value="none"><?= $loc['Выберите отделение'] ?></option>
                 <?php
                 $sql = "SELECT * FROM departments";
                 $result = mysqli_query($mysql, $sql);
@@ -36,25 +36,25 @@ $nav_select = 1;    //Выбор активного пункта меню
                 mysqli_close($mysql);
                 ?>
             </select>
-            <button class="Удалить" name="submit_button" value="button1" id="button1" onclick="delete_department()">Удалить</button>
+            <button class="Удалить" name="submit_button" value="button1" id="button1" onclick="delete_department()"><?= $loc['Удалить'] ?></button>
         </div>
         <div class="Добавить-отделение">
-            <input placeholder="Добавить отделение" id="new_department_name">
-            <button class="Кнопка-Добавить-отделение" name="submit_button" value="button2" id="button2" onclick="add_department()">Добавить</button>
+            <input placeholder="<?= $loc['Добавить отделение'] ?>" id="new_department_name">
+            <button class="Кнопка-Добавить-отделение" name="submit_button" value="button2" id="button2" onclick="add_department()"><?= $loc['Добавить'] ?></button>
         </div>
     </div>
 
     <div class="Редактор-кабинетов">
-        <div class="lable">Редактор кабинетов отделения</div>
+        <div class="lable"><?= $loc['Редактор кабинетов отделения'] ?></div>
         <div class="выбор-кабинетов">
             <select class="select-выбор-кабинетов" id="room">
 
             </select>
-            <button class="Удалить" name="submit_button" value="button3" id="button3" onclick="delete_room()">Удалить</button>
+            <button class="Удалить" name="submit_button" value="button3" id="button3" onclick="delete_room()"><?= $loc['Удалить'] ?></button>
         </div>
         <div class="Добавить-кабинет">
-            <input placeholder="Добавить кабинет к этому отделению" id="new_room_name">
-            <button class="Кнопка-Добавить-кабинет" name="submit_button" value="button4" id="button4" onclick="add_room()">Добавить</button>
+            <input placeholder="<?= $loc['Добавить кабинет к этому отделению'] ?>" id="new_room_name">
+            <button class="Кнопка-Добавить-кабинет" name="submit_button" value="button4" id="button4" onclick="add_room()"><?= $loc['Добавить'] ?></button>
         </div>
     </div>
     <script>

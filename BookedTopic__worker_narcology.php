@@ -52,22 +52,22 @@ $nav_select = 2.7;
 			while ($row = $result->fetch_assoc()) {
 				// определение текста статуса в зависимости от значения в БД
 				if ($row['Statys'] == 1) {
-					$status_text = "На рассмотрении";
+					$status_text =  $loc['На рассмотрении'];
 					$img_patch = "icons/consideration1.png";
 					$color_circle = "color-icons-grey";
 					$color_read = " color-grey-not-read";					
 				} else if ($row['Statys'] == 2) {
-					$status_text = "Прочитана";
+					$status_text = $loc['Прочитана'];
 					$img_patch = "icons/see2.png";
 					$color_circle = "color-icons-grey";
 					$color_read = " ";	
 				} else if ($row['Statys'] == 3) {
-					$status_text = "Завершена";
+					$status_text =  $loc['Завершена'] ;
 					$img_patch = "icons/check_mark1.png";
 					$color_circle = "color-icons-green";
 					$color_read = " ";	
 				} else if ($row['Statys'] == 4) {
-					$status_text = "Отклонена";
+					$status_text =  $loc['Отклонена'];
 					$img_patch = "icons/close.png";
 					$color_circle = "color-icons-red";
 					$color_read = " ";	

@@ -90,22 +90,22 @@ $Найденый_юзер = $результатЮзеров->fetch_assoc();
 			}
 			// определение текста статуса в зависимости от значения в БД
 			if ($Заявка['Statys'] == 1) {
-				$statys_text = "На рассмотрении";
+				$statys_text = $loc['На рассмотрении'];
 				$img_patch = "icons/consideration1.png";
 				$color_circle = "color-icons-grey";
 				$color_read = " color-grey-not-read";
 			} else if ($Заявка['Statys'] == 2) {
-				$statys_text = "Прочитана";
+				$statys_text = $loc['Прочитана'];
 				$img_patch = "icons/see2.png";
 				$color_circle = "color-icons-grey";
 				$color_read = " ";
 			} else if ($Заявка['Statys'] == 3) {
-				$statys_text = "Завершена";
+				$statys_text = $loc['Завершена'] ;
 				$img_patch = "icons/check_mark1.png";
 				$color_circle = "color-icons-green";
 				$color_read = " ";
 			} else if ($Заявка['Statys'] == 4) {
-				$statys_text = "Отклонена";
+				$statys_text = $loc['Отклонена'];
 				$img_patch = "icons/close.png";
 				$color_circle = "color-icons-red";
 				$color_read = " ";
@@ -113,31 +113,31 @@ $Найденый_юзер = $результатЮзеров->fetch_assoc();
 			?>
 
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">ФИО отправителя:</div>
+				<div class="zaivka-lable-card"><?= $loc['ФИО отправителя:'] ?></div>
 				<div class="zaivka-info-card"><?= $Найденый_юзер['SName'] . " " . $Найденый_юзер['Name'] . " " . $Найденый_юзер['PName'] ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Статус заявки:</div>
+				<div class="zaivka-lable-card"> <?= $loc['Статус заявки:'] ?> </div>
 				<div class="zaivka-info-card"> <?= $statys_text ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Отделение:</div>
+				<div class="zaivka-lable-card"><?= $loc['Отделение:'] ?> </div>
 				<div class="zaivka-info-card"><?= $Заявка['department_id'] ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Кабинет:</div>
+				<div class="zaivka-lable-card"> <?= $loc['Кабинет:'] ?> </div>
 				<div class="zaivka-info-card"><?= $Заявка['room_id'] ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Дата написания заявки:</div>
+				<div class="zaivka-lable-card"> <?= $loc['Дата написания заявки:'] ?> </div>
 				<div class="zaivka-info-card"><?= date('d.m.Y в H:i', strtotime($Заявка['date'])) ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Мини-тема:</div>
+				<div class="zaivka-lable-card"> <?= $loc['Мини-тема:'] ?> </div>
 				<div class="zaivka-info-card"><?= $Заявка['mini_topic'] ?></div>
 			</div>
 			<div class="zaivka-stroka">
-				<div class="zaivka-lable-card">Описание проблемы:</div>
+				<div class="zaivka-lable-card"> <?= $loc['Описание проблемы:'] ?> </div>
 				<div class="zaivka-info-card"><?= $Заявка['description'] ?></div>
 			</div>
 
@@ -189,10 +189,10 @@ $Найденый_юзер = $результатЮзеров->fetch_assoc();
 			<div class="Sending_message" onclick="submitForm()" role="button">
 				<img src="icons/Sending_message4.png" class="Sending_message-img">
 			</div>
-			<input class="chat" placeholder="Введите сообщение" type="text" name="message" id="message" autocomplete="off" maxlength="2000" required>
+			<input class="chat" placeholder="<?= $loc['Введите сообщение'] ?>" type="text" name="message" id="message" autocomplete="off" maxlength="2000" required>
 			<input name="id_topics" style="display: none;" value="<?php echo $id_booking; ?>">
 		</form>
-
+		
 		<script>
 			function submitForm() {
 				document.getElementById("messageForm").submit();

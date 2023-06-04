@@ -63,10 +63,10 @@ $nav_select = 2.3;    // Выбор активного пункта меню
 						<img src="<?php echo get_avatar_id($driver['user_id']);?>" alt="ПОЛЬЗОВАТЕЛЬ ещё не выбран" class="cover">
 					</div>
 				</div>
-				<h1 style="width: 100%;">Информация о водителе</h1>
-				<lable class="main-lable">Пользователь на должность этого водителя</lable>
+				<h1 style="width: 100%;"><?= $loc['Информация о водителе'] ?></h1>
+				<lable class="main-lable"><?= $loc['Пользователь на должность этого водителя'] ?></lable>
 				<select class="main-inpyt account_type_select" name="user_id">
-					<option value="0">Не выбран</option>
+					<option value="0"><?= $loc['Не выбран'] ?></option>
 					<?php
 					$users_query = $mysql->query("SELECT * FROM users WHERE `Account-type` = 3");
 					while ($user = $users_query->fetch_assoc()) {
@@ -75,9 +75,9 @@ $nav_select = 2.3;    // Выбор активного пункта меню
 					}
 					?>
 				</select>
-				<lable class="main-lable">Автомобиль для этого водителя</lable>
+				<lable class="main-lable"><?= $loc['Автомобиль для этого водителя'] ?></lable>
 				<select class="main-inpyt account_type_select" name="car_id">
-					<option value="0">Не выбран</option>
+					<option value="0"><?= $loc['Не выбран'] ?></option>
 					<?php
 					$cars_query = $mysql->query("SELECT * FROM cars");
 					while ($car = $cars_query->fetch_assoc()) {
@@ -89,7 +89,7 @@ $nav_select = 2.3;    // Выбор активного пункта меню
 
 
 
-				<lable class="main-lable">Регистрационный номер</lable>
+				<lable class="main-lable"><?= $loc['Регистрационный номер'] ?></lable>
 				<input class="main-inpyt" value="<?php echo $driver['license_plate'] ?>" name="license_plate" readonly>
 				<!-- Далее идут скрытые поля, которые необходимы для отправки данных -->
 				<input type="hidden" name="driver_id" value="<?php echo $driver['id'] ?>">
@@ -101,7 +101,7 @@ $nav_select = 2.3;    // Выбор активного пункта меню
 			<!-- далее идёт код удаления водителя -->
 			<form action="php_constructor/delete_driver.php" method="post" id="block2" class="form_driver_knopka">
 				<input type="hidden" name="driver_id" value="<?php echo $driver['id'] ?>">
-				<button class="form-btn driver_knopka" type="submit" style="margin-top: 10px; background-color: #ff0000;">Удалить водителя</button>
+				<button class="form-btn driver_knopka" type="submit" style="margin-top: 10px; background-color: #ff0000;"><?= $loc['Удалить водителя'] ?></button>
 			</form>
 
 		</main>

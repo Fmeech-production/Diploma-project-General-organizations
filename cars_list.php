@@ -43,8 +43,8 @@ $nav_select = 2.2;    // Выбор активного пункта меню
                     </div>
                     <div class="right_text_car">
                         <h2 class="car_make"><?= $car['make'] . ' ' . $car['model'] ?></h2>
-                        <p class="car_year">Год выпуска: <?= $car['year'] ?></p>
-                        <div class="car_license_plate"><div>Регистрационный номер: </div><div><?= $car['license_plate'] ?></div>
+                        <p class="car_year"> <?= $loc['Год выпуска:'] ?><?= $car['year'] ?></p>
+                        <div class="car_license_plate"><div> <?= $loc['Регистрационный номер:'] ?> </div><div><?= $car['license_plate'] ?></div>
                         </div>
                     </div>
                 </div>

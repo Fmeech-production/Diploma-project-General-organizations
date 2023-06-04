@@ -24,12 +24,12 @@ $nav_select = 2.5;    //Выбор активного пункта меню
 		<main> <!-- Основной контент -->
 			<form action="New-TopicForDiscussion__worker_narcology.php" method="post" class="form_main_1">
 				<lable class="main-lable"><?= $loc['Описание проблемы'] ?></lable>
-				<input class="main-inpyt" name="problem-description" placeholder="Опишите проблему, о которой вы хотите сообщить" required maxlength="255">
+				<input class="main-inpyt" name="problem-description" placeholder="<?= $loc['Опишите проблему, о которой вы хотите сообщить'] ?>" required maxlength="255">
 
-				<lable class="main-lable">Время отправки заявки:</lable>
+				<lable class="main-lable"><?= $loc['Время отправки заявки:'] ?></lable>
 				<p class="main-inpyt" id="current-time"><?= date("H:i:s") ?></p>
 
-				<lable class="main-lable">Тематика проблемы:</lable>
+				<lable class="main-lable"><?= $loc['Тематика проблемы:'] ?></lable>
 				<select class="main-inpyt main-select" name="topic">
 					<?php $themes = $mysql->query("SELECT * FROM themes"); // выборка всех тем из БД
 					while ($theme = $themes->fetch_assoc()) { // перебор каждой темы
@@ -39,9 +39,9 @@ $nav_select = 2.5;    //Выбор активного пункта меню
 				</select>
 
 
-				<label class="main-lable">Отделение</label>
+				<label class="main-lable"><?= $loc['Отделение'] ?></label>
 				<select class="main-inpyt main-select" name="department_id" required>
-					<option value="">Выберите отделение</option>
+					<option value=""><?= $loc['Выберите отделение'] ?></option>
 					<?php
 					$departments = $mysql->query("SELECT * FROM departments"); // выборка всех отделений из БД
 					while ($department = $departments->fetch_assoc()) { // перебор каждого отделения
@@ -51,9 +51,9 @@ $nav_select = 2.5;    //Выбор активного пункта меню
 				</select>
 
 
-				<label class="main-lable">Кабинет</label>
+				<label class="main-lable"><?= $loc['Кабинет'] ?></label>
 				<select class="main-inpyt main-select" name="room_id" id="room-select" required>
-					<option value="">Выберите кабинет</option>
+					<option value=""><?= $loc['Выберите кабинет'] ?></option>
 				</select>
 
 				<script>
@@ -77,7 +77,7 @@ $nav_select = 2.5;    //Выбор активного пункта меню
 
 
 
-				<button class="form-btn">Отправить заявку</button>
+				<button class="form-btn"><?= $loc['Отправить заявку'] ?></button>
 
 				<script>
 					function updateDateTime() {

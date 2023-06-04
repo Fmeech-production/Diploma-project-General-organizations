@@ -44,6 +44,6 @@ while ($driver = $drivers->fetch_object()) {
 	$end_string .= "</div>";
 }
 if ($end_string == "") {
-	$end_string = "Для этого автомобиля нет добавленных водителей.";
+	$end_string =  $loc['Для этого автомобиля нет добавленных водителей.'] ;
 }
 echo $end_string;

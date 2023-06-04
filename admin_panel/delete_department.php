@@ -25,15 +25,15 @@ if (isset($_POST['button'])) {
 					// Удаление отделения из таблицы departments
 					$sql = "DELETE FROM departments WHERE id = $department_id";
 					if (mysqli_query($mysql, $sql)) {
-						echo "Отделение успешно удалено!";
+						echo $loc['Отделение успешно удалено!'] ;
 					} else {
-						echo "Ошибка при удалении отделения: " . mysqli_error($mysql);
+						echo $loc['Ошибка при удалении отделения: '] . mysqli_error($mysql);
 					}
 				} else {
-					echo "Ошибка при удалении отделения: " . mysqli_error($mysql) . "<br> а так же айди с поста = $department_id ";
+					echo $loc['Ошибка при удалении отделения: '] . mysqli_error($mysql) . "<br> а так же айди с поста = $department_id ";
 				}
 			} else {
-				echo "Ошибка при удалении отделения: " . mysqli_error($mysql) . "<br> а так же айди с поста = $department_id ";
+				echo $loc['Ошибка при удалении отделения: '] . mysqli_error($mysql) . "<br> а так же айди с поста = $department_id ";
 			}
 
 			// Закрытие соединения с базой данных
@@ -64,12 +64,12 @@ if (isset($_POST['button'])) {
 			// Удаление кабинета из таблицы rooms
 			$sql = "DELETE FROM rooms WHERE id = $room_id";
 			if (mysqli_query($mysql, $sql)) {
-				echo "Кабинет успешно удален!";
+				echo $loc['Кабинет успешно удален!'];
 			} else {
-				echo "Ошибка при удалении кабинета: " . mysqli_error($mysql);
+				echo $loc['Ошибка при удалении кабинета:']  . mysqli_error($mysql);
 			}
 		} else {
-			echo "Ошибка при удалении отделения: " . mysqli_error($mysql) . "<br> а так же айди с поста = $department_id ";
+			echo $loc['Ошибка при удалении отделения:'] . mysqli_error($mysql) . "<br> а так же айди с поста = $department_id ";
 		}
 
 		// Закрытие соединения с базой данных

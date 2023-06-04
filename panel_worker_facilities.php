@@ -23,25 +23,25 @@ $nav_select = 1;    //Выбор активного пункта меню
         ?>
         <main> <!-- Основной контент -->
             <form action="new-bronirovanie.php" method="post">
-                <lable class="main-lable">Место отправления</lable>
-                <input class="main-inpyt" name="Start_road" placeholder="Можете оставить это поле пустым, если собираетесь ехать из наркологии">
-                <lable class="main-lable">Куда едим?</lable>
-                <input class="main-inpyt" name="End_road" placeholder="Можете оставить это поле пустым, если собираетесь приехать в наркологию">
-                <lable class="main-lable">Дата отправки?</lable>
-                <input class="main-inpyt" name="Day" placeholder="Можете оставить это поле пустым, если собираетесь ехать сегодня" type="date" required>
+                <lable class="main-lable"><?= $loc['Место отправления'] ?> </lable>
+                <input class="main-inpyt" name="Start_road" placeholder="<?= $loc['Можете оставить это поле пустым, если собираетесь ехать из наркологии'] ?> ">
+                <lable class="main-lable"><?= $loc['Куда едим?'] ?> </lable>
+                <input class="main-inpyt" name="End_road" placeholder="<?= $loc['Можете оставить это поле пустым, если собираетесь приехать в наркологию'] ?> ">
+                <lable class="main-lable"><?= $loc['Дата отправки?'] ?> </lable>
+                <input class="main-inpyt" name="Day" placeholder="<?= $loc['Можете оставить это поле пустым, если собираетесь ехать сегодня'] ?> " type="date" required>
                 <div class="razdelitel">
                     <div class="left">
-                        <lable class="main-lable">Планируемое время отъезда</lable>
+                        <lable class="main-lable"><?= $loc['Планируемое время отъезда'] ?></lable>
                         <input class="main-inpyt main-inpyt2" name="Start_time" placeholder="" type="time" min="06:00" max="18:00" required>
                     </div>
                     <div class="right">
-                        <lable class="main-lable">Когда планируете прибыть?</lable>
+                        <lable class="main-lable"<?= $loc['Когда планируете прибыть?'] ?>></lable>
                         <input class="main-inpyt main-inpyt2" name="End_time" placeholder="" type="time" min="06:00" max="18:00" required>
                     </div>
                 </div>
-                <lable class="main-lable">Планируемое количество человек</lable>
-                <input class="main-inpyt" name="Number_people" placeholder="Можете оставить это поле пустым, если едите в одиночку">
-                <button class="form-btn">Оставить заявку</button>
+                <lable class="main-lable"><?= $loc['Планируемое количество человек'] ?></lable>
+                <input class="main-inpyt" name="Number_people" placeholder="<?= $loc[' Можете оставить это поле пустым, если едите в одиночку'] ?>">
+                <button class="form-btn"><?= $loc['Оставить заявку'] ?> </button>
             </form>
         </main>
     </div>

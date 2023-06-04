@@ -18,9 +18,9 @@ if (isset($_POST['button'])) {
             // Удаление отделения из таблицы themes
             $sql = "DELETE FROM themes WHERE id = $department_id";
             if (mysqli_query($mysql, $sql)) {
-                echo "Тема успешно удалено!";
+                echo $loc['Тема успешно удалена!'];
             } else {
-                echo "Ошибка при удалении отделения: " . mysqli_error($mysql);
+                echo $loc['Ошибка при удалении отделения:'] . mysqli_error($mysql);
             }
 
             // Закрытие соединения с базой данных

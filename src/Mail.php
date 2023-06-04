@@ -8,6 +8,7 @@ if (!defined('ROOT_DIR'))
 require_once(ROOT_DIR . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
+use Fmeech2\ConnectSQL;
 
 class Mail
 {
@@ -29,13 +30,23 @@ class Mail
 		$mail->setFrom('Манипулятор', 'Робот наркологии');
 		$mail->addAddress($email);
 		$mail->isHTML(true);
-		$mail->Subject = 'Тестовое письмо';
+		$mail->Subject = 'Уведомление:';
 		$mail->Body = $mess;
 		// отправляем письмо
 		if ($mail->send()) {
 			echo 'ПИСЬМО ОТПРАВЛЕНО';
 		} else {
 			echo 'ОШИБКА: ' . $mail->ErrorInfo;
+		}
+	}
+	public static function PUSHmessByStatus($mess, int $status)
+	{
+		$mysql = ConnectSQL::getStaticSQL();
+		//Поиск Работяг ачх по статусу
+		$admin_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= $status");
+		while ($admin = $admin_userS->fetch_object()) {
+			//Отправка письма по почте
+			Mail::PUSHmess($admin->Email, $mess);
 		}
 	}
 }

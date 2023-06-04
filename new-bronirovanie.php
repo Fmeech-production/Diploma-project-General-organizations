@@ -8,7 +8,7 @@ use Fmeech2\Mail;
 use Fmeech2\ConnectSQL;
 use Fmeech2\ConnectCOOKIE;
 
-ob_start();// Включаем буферизацию вывода
+ob_start(); // Включаем буферизацию вывода
 
 //Создание нового бронирования
 $Start_road = $_POST['Start_road'];
@@ -50,11 +50,16 @@ if ($result) {
 	//Добавление записи в логи
 	$BookingLog->addLog($id, "Заявку на бронирование была создана ($Day в $Start_time c примечанием $notes)", $user->id);
 
-	$admin_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= 4");
-	while ($admin = $admin_userS->fetch_object()) {
-		//Отправка письма по почте
-		Mail::PUSHmess($admin->Email, "Заявку на бронирование была создана ($Day в $Start_time c примечанием '$notes') Телефон: $telephone");
-	}
+	//Поиск Работяг ачх
+	//$rabotaga_userS = $mysql->query("SELECT * FROM `users` WHERE `Account-type`= 4");
+	//while ($admin = $rabotaga_userS->fetch_object()) {
+	//	//Отправка письма по почте
+	//	Mail::PUSHmess($admin->Email, "Заявку на бронирование была создана ($Day в $Start_time c примечанием '$notes') Телефон: $telephone");
+	//}
+	//Если всё будет работать или ты уже забудешь, что значат строки комментариев выше, значит удали их. Не засоряй	код.
+
+	//Отправка письма всем работягам
+	Mail::PUSHmessByStatus("Заявку на бронирование была создана ($Day в $Start_time c примечанием '$notes') Телефон: $telephone", 2);
 }
 
 header('Location: /?error=error7');

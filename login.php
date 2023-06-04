@@ -96,7 +96,7 @@
                         <div class="error error-newpassword2 error-mob newpassword2js">Пароли не совпадают</div>
                         <input class="login password" id="newpassword2" name="newpassword2" placeholder="Повторите пароль" type="password" onkeyup="jsPass2()">
 
-                        <button class="form-btn" type="button" onclick="nextReg2()">Продолжить</button>
+                        <button class="form-btn" type="button" onclick="checkInput(); nextReg2();">Продолжить</button>
                     </div>
 
                     <div class="contener-input" id="reg-input3">

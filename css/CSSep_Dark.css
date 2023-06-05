@@ -1,25 +1,30 @@
 html,
 body {
-    background-color: rgb(32,34,37);
-}
-nav{
-    background-color: rgb(47,49,54);
-}
-ul {
-    background-color: rgb(47,49,54);
-}
-li{
-    border-bottom: 3px solid rgb(47,49,54);
-}
-li:hover{
-    background-color: rgb(66,70,77);
-    border-bottom: 3px solid rgb(60,63,69);
+    background-color: rgb(32, 34, 37);
 }
 
-.li-icon{
+nav {
+    background-color: rgb(47, 49, 54);
+}
+
+ul {
+    background-color: rgb(47, 49, 54);
+}
+
+li {
+    border-bottom: 3px solid rgb(47, 49, 54);
+}
+
+li:hover {
+    background-color: rgb(66, 70, 77);
+    border-bottom: 3px solid rgb(60, 63, 69);
+}
+
+.li-icon {
     filter: invert(0.92);
 }
-.not-black{
+
+.not-black {
     filter: invert(0);
 }
 
@@ -28,8 +33,8 @@ li:hover{
 }
 
 .select {
-    background-color: rgb(66,70,77);
-    border-bottom: 3px solid rgb(60,63,69);
+    background-color: rgb(66, 70, 77);
+    border-bottom: 3px solid rgb(60, 63, 69);
 }
 
 .select .li-icon {
@@ -37,131 +42,162 @@ li:hover{
     opacity: 0.75;
     filter: invert();
 }
-    
+
 .select:hover {
-    background-color: rgb(60,63,69);
-    border-bottom: 3px solid rgb(60,63,69);
+    background-color: rgb(60, 63, 69);
+    border-bottom: 3px solid rgb(60, 63, 69);
 }
-header{
-    background-color: rgb(32,34,37);
+
+header {
+    background-color: rgb(32, 34, 37);
 }
-.cabinet-name-header{
+
+.cabinet-name-header {
     color: white;
 }
-.editor-background-greey{
-    background-color: rgb(47,49,54);
-    border-bottom: 3px solid rgb(60,63,69);
+
+.editor-background-greey {
+    background-color: rgb(47, 49, 54);
+    border-bottom: 3px solid rgb(60, 63, 69);
 }
-.avatar-editor{
-    background-color: rgb(47,49,54);
+
+.avatar-editor {
+    background-color: rgb(47, 49, 54);
 }
-#id-ava-div{
-    border: 4px solid rgb(47,49,54);
+
+#id-ava-div {
+    border: 4px solid rgb(47, 49, 54);
 }
-main{
-    background-color: rgb(47,49,54);
+
+main {
+    background-color: rgb(47, 49, 54);
 }
-.main-inpyt{
-    background-color: rgb(32,34,37);
-    border: 1px solid rgb(60,63,69);
-    color: rgb(150,152,157);
+
+.main-inpyt {
+    background-color: rgb(32, 34, 37);
+    border: 1px solid rgb(60, 63, 69);
+    color: rgb(150, 152, 157);
 }
-.main-inpyt:hover{
-    background-color: rgb(32,34,37);
-    border: 1px solid rgb(60,63,69);
+
+.main-inpyt:hover {
+    background-color: rgb(32, 34, 37);
+    border: 1px solid rgb(60, 63, 69);
     color: white;
 }
-.main-inpyt:focus{
-    background-color: rgb(32,34,37);
-    border: 2px solid rgb(60,63,69);
+
+.main-inpyt:focus {
+    background-color: rgb(32, 34, 37);
+    border: 2px solid rgb(60, 63, 69);
     color: white;
 }
-.main-inpyt::placeholder{
-    color: rgb(150,152,157);
+
+.main-inpyt::placeholder {
+    color: rgb(150, 152, 157);
 }
 
 .main-inpyt:hover::placeholder {
     color: rgba(98, 148, 222, 0.8);
 }
+
 .main-inpyt:focus::placeholder {
     color: rgba(98, 148, 222, 0.8);
 }
-.info_acc_text1{
+
+.info_acc_text1 {
     color: white;
 }
-.main-lable{
+
+.main-lable {
     color: white;
 }
+
 .logo {
-    border-bottom: 2px solid rgb(32,34,37);
+    border-bottom: 2px solid rgb(32, 34, 37);
 }
 
 .logo:hover {
-    background-color: rgb(47,49,54);
+    background-color: rgb(47, 49, 54);
     color: rgb(112, 118, 123);
-    border-bottom: 2px solid rgb(32,34,37);
+    border-bottom: 2px solid rgb(32, 34, 37);
 
 }
 
 .img-logo {
-    border: 1px rgb(156,163,175) solid;
+    border: 1px rgb(156, 163, 175) solid;
 }
+
 .name-acc {
-    color: rgb(209,219,224);
+    color: rgb(209, 219, 224);
 }
+
 hr {
-    background-color: rgb(60,63,69);
+    background-color: rgb(60, 63, 69);
 }
+
 .ava-form-popup {
-    background-color: rgb(47,49,54);
+    background-color: rgb(47, 49, 54);
     color: white;
 }
+
 #cover_form2 {
-    background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
 }
+
 .slider {
-    background-color: rgb(212,213,214);
+    background-color: rgb(212, 213, 214);
 }
-.ava-text1{
+
+.ava-text1 {
     border-bottom: 1px solid rgba(237, 238, 240, 0.2);
 }
-.ava-text3{
+
+.ava-text3 {
     border-top: 1px solid rgba(237, 238, 240, 0.2);
 }
-.save_rez{
+
+.save_rez {
     background-color: rgb(237, 238, 240);
-    color: rgb(47,49,54);
+    color: rgb(47, 49, 54);
 }
+
 .save_rez:hover {
     background-color: rgba(237, 238, 240, 0.8);
 }
-.not_save_rez{
+
+.not_save_rez {
     background-color: rgba(237, 238, 240, 0.2);
     color: rgb(255, 255, 255);
 }
+
 .not_save_rez:hover {
     background-color: rgba(237, 238, 240, 0.4);
 }
-.not_save_cover{
+
+.not_save_cover {
     background-color: rgba(237, 238, 240, 0.2);
     color: rgb(255, 255, 255);
 }
+
 .not_save_cover:hover {
     background-color: rgba(237, 238, 240, 0.4);
 }
-.ava-form{
-}
-.close-new-ava{
+
+.ava-form {}
+
+.close-new-ava {
     filter: invert();
 }
-.label_new_ava2{
+
+.label_new_ava2 {
     background-color: rgba(0, 0, 0, 0);
 }
-.label_new_ava2:hover{
+
+.label_new_ava2:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    border: 3px dashed rgb(60,60,60);
+    border: 3px dashed rgb(60, 60, 60);
 }
-.plus_new_ava{
+
+.plus_new_ava {
     filter: invert();
 }
 
@@ -174,36 +210,36 @@ hr {
 
 ::-webkit-scrollbar-track {
     margin: 15px;
-    background: rgb(46,51,56);
+    background: rgb(46, 51, 56);
     border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(32,34,37);
+    background-color: rgb(32, 34, 37);
     border-radius: 20px;
     border: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(32,34,37);
+    background-color: rgb(32, 34, 37);
     border-radius: 20px;
     border: none;
 }
 
-
-
-.zaivka-time{
-    color: white;
+tr:hover {
+    background-color: #4e4e4e;
 }
 
-.zaivka:hover {
-    
+.zaivka-time {
+    color: rgb(239 239 239);
 }
 
-.zaivka-status-img{
+.zaivka:hover {}
+
+.zaivka-status-img {
     -webkit-filter: invert(100%);
     filter: invert(100%);
-   
+
 }
 
 .color-icons-grey {
@@ -218,8 +254,8 @@ hr {
 .color-icons-red {
     background-color: rgb(128, 33, 36);
 }
- 
-.color-icons-blue{
+
+.color-icons-blue {
     background-color: rgb(33, 117, 128);
 }
 
@@ -230,16 +266,17 @@ hr {
     margin-left: 10px;
     padding-left: 10px;
     border-bottom: 2px solid rgb(54, 54, 54);
-   
-}
-.zaivka {
-    
-   border-bottom: 2px solid rgb(60,63,69);
+
 }
 
-.zaivka-time:hover{
-    color: white;   
-    
+.zaivka {
+
+    border-bottom: 2px solid rgb(60, 63, 69);
+}
+
+.zaivka-time:hover {
+    color: white;
+
 }
 
 .zaivka:hover .color-icons-grey {
@@ -260,50 +297,54 @@ hr {
 
 
 main {
-    background-color: rgb(47,49,54) !important;
+    background-color: rgb(47, 49, 54) !important;
 }
 
 
 
 .color-grey-not-read {
-  background-color: rgb(60, 60, 60);
-  border-bottom: 4px solid rgb(54, 54, 54);
+    background-color: rgb(60, 60, 60);
+    border-bottom: 4px solid rgb(54, 54, 54);
 }
 
 
 .zaivka-info-card {
-   
-    color: rgb(112, 118, 123) !important;
-   
-}
 
-.zaivka-lable-card, .chat__message__name_name, .chat__message__text{
     color: white !important;
+
 }
 
-.Sending_message__container{
-    background-color: rgb(60, 60, 60) !important;  
+.zaivka-lable-card,
+.chat__message__name_name,
+.chat__message__text {
+    color: rgb(112, 118, 123) !important;
 }
 
-.chat__message{
-    background-color: rgb(74, 74, 74) !important; 
+.Sending_message__container {
+    background-color: rgb(60, 60, 60) !important;
 }
 
-.chat, .Sending_message:has(.Sending_message-img){
-background-color:  rgb(32,34,37) !important;
+.chat__message {
+    background-color: rgb(74, 74, 74) !important;
 }
 
-#search{
-    background-color:  rgb(32,34,37) !important;
+.chat,
+.Sending_message:has(.Sending_message-img) {
+    background-color: rgb(32, 34, 37) !important;
+}
+
+#search {
+    background-color: rgb(32, 34, 37) !important;
     border: none !important;
 }
 
-.Sending_message-img, .icon-admin{
+.Sending_message-img,
+.icon-admin {
     -webkit-filter: invert(100%);
     filter: invert(100%);
 }
 
-.color-grey-not-read .color-icons-grey{
+.color-grey-not-read .color-icons-grey {
     background-color: rgb(75, 75, 75) !important;
 }
 
@@ -312,14 +353,16 @@ background-color:  rgb(32,34,37) !important;
 }
 
 .slider-text {
-    color: white  !important;
+    color: white !important;
 }
 
 .slider-text-2 {
-    color: white  !important;
+    color: white !important;
 }
 
-th, td, .text {
+th,
+td,
+.text {
     color: white !important;
 }
 
@@ -330,52 +373,64 @@ th, td, .text {
 }
 
 
-.square:hover .icon {
- filter: invert(0) !important;
+.square:hover .icon .icon-admin {
+    filter: invert(0.9) !important;
 }
 
 
-tr.odd, table.dataTable.display tbody tr.odd, table.dataTable tbody tr , .id-column sorting_1{
-    background-color:  rgb(32,34,37) !important;
+
+
+tr.odd,
+table.dataTable.display tbody tr.odd,
+table.dataTable tbody tr,
+.id-column sorting_1 {
+    background-color: rgb(32, 34, 37) !important;
 }
 
-table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 , table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
-    background-color:  rgb(32,34,37) !important;
+table.dataTable.display tbody tr.odd>.sorting_1,
+table.dataTable.order-column.stripe tbody tr.odd>.sorting_1,
+table.dataTable.display tbody tr.even>.sorting_1,
+table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+    background-color: rgb(32, 34, 37) !important;
 }
 
-#add-user-form{
-    background-color:  rgb(32,34,37) !important;
+#add-user-form {
+    background-color: rgb(32, 34, 37) !important;
     border: 1px solid rgb(75, 75, 75) !important;
     color: white !important;
 }
 
-#add-user-form input, .account_type{
-    background-color:rgb(75, 75, 75) !important;
-    border:  none !important;
+#add-user-form input,
+.account_type {
+    background-color: rgb(75, 75, 75) !important;
+    border: none !important;
     color: white;
 }
 
-.block1 .user-info .zaivka .avatar-user .avatar-user-img , .zaivka-status-div-img .avatar-user-block2{
+.block1 .user-info .zaivka .avatar-user .avatar-user-img,
+.zaivka-status-div-img .avatar-user-block2 {
     -webkit-filter: invert(0);
     filter: invert(0) !important;
 }
 
-.car_block{
+.car_block {
     color: white !important;
 }
 
-.car_block:hover{
-   
-     background-color:rgb(75, 75, 75) !important;
+.car_block:hover {
+
+    background-color: rgb(75, 75, 75) !important;
 }
 
 
-#block1 h1{
+#block1 h1 {
     color: white !important;
 }
 
-.main-list, .main-select-2, .drivers_select{
-     background-color:  rgb(32,34,37) !important;
+.main-list,
+.main-select-2,
+.drivers_select {
+    background-color: rgb(32, 34, 37) !important;
     border: 1px solid rgb(75, 75, 75) !important;
     color: white !important;
 }
@@ -383,7 +438,25 @@ table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.st
 
 
 .green_light_to_the_application {
-  
+
     box-shadow: 0 -5px 5px 0 rgb(64, 64, 64), 0 5px 5px 0 rgb(49, 49, 49) !important;
-    background-color:rgb(75, 75, 75) !important;
+    background-color: rgb(75, 75, 75) !important;
+}
+
+.zaivka-description {
+    color: white;
+}
+
+.square:hover {
+    box-shadow: 0 0 0 0px rgb(227 227 227);
+    background-color: rgb(227 227 227);
+}
+
+.square:hover .icon .text {
+    color: rgb(47, 49, 54) !important;
+    filter: invert(1) !important;
+}
+tr td .avatar-user-block2 .avatar-user-img{
+    filter: invert(0) !important;
+
 }

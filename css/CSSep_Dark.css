@@ -342,3 +342,48 @@ tr.odd, table.dataTable.display tbody tr.odd, table.dataTable tbody tr , .id-col
 table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 , table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
     background-color:  rgb(32,34,37) !important;
 }
+
+#add-user-form{
+    background-color:  rgb(32,34,37) !important;
+    border: 1px solid rgb(75, 75, 75) !important;
+    color: white !important;
+}
+
+#add-user-form input, .account_type{
+    background-color:rgb(75, 75, 75) !important;
+    border:  none !important;
+    color: white;
+}
+
+.block1 .user-info .zaivka .avatar-user .avatar-user-img , .zaivka-status-div-img .avatar-user-block2{
+    -webkit-filter: invert(0);
+    filter: invert(0) !important;
+}
+
+.car_block{
+    color: white !important;
+}
+
+.car_block:hover{
+   
+     background-color:rgb(75, 75, 75) !important;
+}
+
+
+#block1 h1{
+    color: white !important;
+}
+
+.main-list, .main-select-2, .drivers_select{
+     background-color:  rgb(32,34,37) !important;
+    border: 1px solid rgb(75, 75, 75) !important;
+    color: white !important;
+}
+
+
+
+.green_light_to_the_application {
+  
+    box-shadow: 0 -5px 5px 0 rgb(64, 64, 64), 0 5px 5px 0 rgb(49, 49, 49) !important;
+    background-color:rgb(75, 75, 75) !important;
+}

@@ -98,22 +98,25 @@ label {
   border-radius: 8px;
 
 }
-.PrivacyPolicy{
-  margin-left: 39px; 
-  margin-top: 5px; 
+
+.PrivacyPolicy {
+  margin-left: 39px;
+  margin-top: 5px;
   display: flex;
 }
-#checkboxPrivacyPolicy{
+
+#checkboxPrivacyPolicy {
   margin-bottom: auto;
 }
 
-.labelPrivacyPolicy{
+.labelPrivacyPolicy {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% - 39px - 20px);
   white-space: nowrap;
   font-size: 15.8px;
 }
+
 .PrivacyPolicySsilka {
   text-decoration: underline;
   cursor: pointer;
@@ -826,16 +829,18 @@ label {
     display: block;
     font-size: 4.5vw;
   }
-  .PrivacyPolicy{
-    margin-left: 20px; 
-    margin-top: 20px; 
+
+  .PrivacyPolicy {
+    margin-left: 20px;
+    margin-top: 20px;
     display: flex;
   }
-  #checkboxPrivacyPolicy{
+
+  #checkboxPrivacyPolicy {
     margin-bottom: auto;
   }
-  
-  .labelPrivacyPolicy{
+
+  .labelPrivacyPolicy {
     display: flex;
     flex-wrap: wrap;
     width: calc(100% - 39px - 20px);
@@ -861,4 +866,29 @@ label {
 
 #reg-input3 {
   display: none;
+}
+
+@media (min-width: 0px) and (max-width: 980px)
+/* Телефоны */
+/* Планшеты и мини экраны от ноутбуков  */
+/* ТОЛЬКО ДЛЯ СТРАНИЦЫ РЕГИСТРАЦИИ! !!НЕ ПИШИ ЗДЕСЬ КОД!!  */
+
+  {
+  .box-acktiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-acktiv div,
+  #rememberMe {
+    margin-left: 0;
+  }
+  
+  .form-btn {
+    margin-top: 30px;
+  }
+  .otstyp{
+    width: 100%;
+    height: 100%;
+  }
 }

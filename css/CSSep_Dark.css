@@ -261,7 +261,7 @@ tr:hover {
 
 .zaivka:hover {
     border-radius: 10px;
-    background-color: rgb(74, 74, 74);
+    background-color: rgb(54 56 60);
     width: calc(100% - 30px);
     margin-left: 10px;
     padding-left: 10px;
@@ -303,8 +303,8 @@ main {
 
 
 .color-grey-not-read {
-    background-color: rgb(60, 60, 60);
-    border-bottom: 4px solid rgb(54, 54, 54);
+    background-color: rgb(44 46 50);
+    border-bottom: 2px solid rgb(44 46 50);
 }
 
 
@@ -325,7 +325,7 @@ main {
 }
 
 .chat__message {
-    background-color: rgb(74, 74, 74) !important;
+    background-color: rgb(44 46 50) !important;
 }
 
 .chat,
@@ -369,7 +369,7 @@ td,
 
 
 .square {
-    box-shadow: 0 0 0 3px rgb(223, 223, 223);
+    box-shadow: 0 0 0 3px rgb(223, 223, 223) !important;
 }
 
 
@@ -459,4 +459,7 @@ table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
 tr td .avatar-user-block2 .avatar-user-img{
     filter: invert(0) !important;
 
+}
+.checkbox_save_password_text{
+    color: white !important;
 }

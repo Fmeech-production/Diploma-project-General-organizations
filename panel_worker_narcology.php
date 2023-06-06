@@ -44,7 +44,7 @@ $nav_select = 1;    // Выбор активного пункта меню
 				<lable class="main-lable">Планируемое количество человек</lable>
 				<input class="main-inpyt" name="Number_people" placeholder="Можете оставить это поле пустым, если едите в одиночку">
 				<lable class="main-lable">Примечание</lable>
-				<input class="main-inpyt" name="notes" placeholder="<?= $loc['Optional_field'] ?>" maxlength="4000">
+				<textarea  class="main-inpyt text_area_block_width" name="notes" placeholder="<?= $loc['Optional_field'] ?>" maxlength="4000"></textarea>
 				<lable class="main-lable">Телефон</lable>
 				<input class="main-inpyt" name="telephone" placeholder="<?= $loc['Optional_field'] ?>" maxlength="32">
 				<button class="form-btn">Оставить заявку</button>

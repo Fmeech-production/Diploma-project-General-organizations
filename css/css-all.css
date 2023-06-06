@@ -619,3 +619,8 @@ tr:hover {
 .Edit_zaivka_statys4{
     background-color: rgb(255 165 184);
 }
+.text_area_block_width{
+    max-width: 588px;
+    min-width: 588px;
+    height: 100px;
+}

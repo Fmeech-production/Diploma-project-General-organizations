@@ -24,7 +24,7 @@ $nav_select = 2.5;    //Выбор активного пункта меню
 		<main> <!-- Основной контент -->
 			<form action="New-TopicForDiscussion__worker_narcology.php" method="post" class="form_main_1">
 				<lable class="main-lable"><?= $loc['Описание проблемы'] ?></lable>
-				<input class="main-inpyt" name="problem-description" placeholder="Опишите проблему, о которой вы хотите сообщить" required maxlength="255">
+				<textarea class="main-inpyt text_area_block_width" name="problem-description" placeholder="Опишите проблему, о которой вы хотите сообщить" required maxlength="255"></textarea>
 
 				<lable class="main-lable">Время отправки заявки:</lable>
 				<p class="main-inpyt" id="current-time"><?= date("H:i:s") ?></p>

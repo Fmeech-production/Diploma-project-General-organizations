@@ -357,7 +357,8 @@
     }
 
     .left {
-        width: 50%;
+        margin-left: 4px;
+        width: calc(100% - 44px);
         float: left;
         display: flex;
         flex-wrap: wrap;
@@ -376,7 +377,7 @@
 
     .main-inpyt-left {
         margin-right: auto;
-        margin-left: 0;
+        margin-left: 0 !important;
         text-align: left;
     }
 
@@ -385,181 +386,275 @@
         margin-right: 0;
         text-align: right;
     }
-#current-time{
-    border: none;
-    background-color: transparent;
-    margin-top: 0;
-    margin-bottom: 0;
+
+    #current-time {
+        border: none;
+        background-color: transparent;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main-select {
+        height: 38px;
+        padding: 0 0 0 10px;
+    }
+
+    .main-select:focus {
+        height: 38px;
+        padding: 0 0 0 10px;
+    }
+
+    .zaivka-stroka {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .zaivka-info-card {
+        margin-left: 20px;
+    }
+
+    .card {
+        border-radius: 0;
+        max-height: calc(100% - 62px - 70px - 40px);
+    }
+
+    .Sending_message__container {
+        border-radius: 0;
+        width: 100%;
+        margin: 0 0 12px 0;
+    }
+
+    .chat__message,
+    .chat__message--left,
+    .chat__message--right {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .chat__messages {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .chat__message__text {
+        width: calc(100% - 40px);
+        padding-right: 10px;
+    }
+
+    .chat__message {
+        position: relative;
+    }
+
+    .chat__message--right .chat__message__avatar {
+        order: -1;
+        margin-left: auto;
+        margin-right: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .chat__message--left .chat__message__avatar {
+        order: -1;
+        margin-right: auto;
+        margin-left: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    .chat__message--right .chat__message__name {
+        margin-right: 40px;
+    }
+
+    .chat__message--left .chat__message__name {
+        margin-left: 40px;
+    }
+
+    .form-btn {
+        margin: auto;
+        margin-left: 20px;
+        margin-top: 10px
+    }
+
+    .mob_scroll {
+        max-height: 1000%;
+    }
+
+    .table_organizer {
+        height: calc(100% - 50px - 13px - 10px);
+        margin-bottom: 0;
+        overflow-y: auto;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+
+    .zaivka-info-card {
+        margin-left: 20px;
+    }
+
+    .Odobreno-btn--Otcloneno {
+        margin: 0px;
+        margin-left: 0px;
+        width: calc(100% - 15px - 15px);
+        color: rgb(25, 27, 29);
+        padding-top: 0;
+    }
+
+    .btn__margin-right {
+        margin-left: 5px;
+    }
+
+    .btn__margin-left {
+        margin-right: -5px;
+    }
+
+    .mob_admin_panel {
+        width: calc(100% - 30px);
+    }
+
+    .square-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .square {
+        flex-basis: 100%;
+        aspect-ratio: 9/5;
+        margin: 10px calc(10% / 6) 10px calc(10% / 6);
+        position: relative;
+        box-shadow: 0 0 0 3px rgb(21, 21, 21);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        user-select: none;
+        transition: all .2s ease;
+    }
+
+    #add-user-form {
+        display: none;
+    }
+
+    .zaivka-time {
+        width: calc(100% - 57px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .main_user_details {
+        height: auto;
+    }
+
+    .car_license_plate div:nth-child(1) {
+        display: none;
+    }
+
+    .car_license_plate div:nth-child(2) {
+        background-color: white;
+        padding: 2px 5px;
+        border-radius: 5px;
+        transform: translateY(-2px);
+        margin-left: 5px;
+        color: black;
+        font-weight: 700;
+        box-shadow: 0 0 0 3px black;
+    }
+
+    .form_car_knopka {
+        width: 100%;
+    }
+
+    .car_knopka {
+        width: calc(100% - 40px);
+        margin-left: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .form_driver_knopka {
+        width: 100%;
+    }
+
+    .driver_knopka {
+        width: calc(100% - 40px);
+        margin-left: 5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .text_area_block_width{
+        max-width: calc(100vw - 40px - 12px) !important;
+        min-width: calc(100vw - 40px - 12px) !important;
+        width: calc(100vw - 40px - 12px) !important;
+        height: 100px !important;
+    }
+    .chat{
+        margin-left: calc(20px + 80px - 48px - 20px - 20px) !important;
+        width: calc(100% - 20px - 20px - 50px) !important;
+    }
+
+
+
+
+
+#new_notification1,#new_notification2{
+    margin-top: 5px;
+    margin-bottom: auto;
 }
-.main-select{
-    height: 38px;
-    padding: 0 0 0 10px;
+form .razdelitel{
+    margin: 10px 0 0 0px !important;
 }
-.main-select:focus{
-    height: 38px;
-    padding: 0 0 0 10px;
+form .razdelitel .left .main-inpyt-left{
+    margin-left: 5px !important;
+}
+form .razdelitel .left .main-inpyt{
+    margin: 0px 0 0 0px !important;
+}
+.checkbox_save_password{
+    margin-left: 15px !important;
+}
+.checkbox_save_password_text {
+    width: auto !important;
+    min-width: 100px !important;
 }
 
-.zaivka-stroka{
+.account_type_select{
+    margin: 0 0 0 10px !important;
+    color: white !important;
+    background-color: #222222 !important;
+    width: calc(100% - 20px) !important;
+}
+#block1 .main-select-2{
+    width: calc(100% - 10px);
+    margin-top: 5px;
+}
+#new_draiver_in_car{
+    width: calc(100% - 10px);
+    margin-left: 5px;
+    margin-top: 15px;
+}
+body .wrap .mob_scroll .razdelitel{
+    margin-left: 10px !important;
+}
+
+body .wrap .mob_scroll div .razdelitel{
     display: flex;
     flex-direction: column;
-}
-.zaivka-info-card{
-    margin-left: 20px;
-}
-.card{
-    border-radius: 0;
-    max-height: calc(100% - 62px - 70px - 40px);
-}
-.Sending_message__container{
-border-radius: 0;
-width: 100%;
-margin: 0 0 12px 0;
-}
-.chat__message, .chat__message--left, .chat__message--right{
-    display: flex;
-    flex-direction: column;
-border-radius: 0;
-}
-
-.chat__messages{
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-}
-.chat__message__text{
-    width: calc(100% - 40px);
-    padding-right: 10px;
-}
-.chat__message{
-    position: relative;
-}
-.chat__message--right .chat__message__avatar{
-    order: -1;    
-    margin-left: auto;
-    margin-right: 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.chat__message--left .chat__message__avatar{
-    order: -1;    
-    margin-right: auto;
-    margin-left: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-left: 0 !important;
 }
 
 
-.chat__message--right .chat__message__name{
-    margin-right: 40px;
-}
-.chat__message--left .chat__message__name{
-    margin-left: 40px;
-}
- 
-.form-btn{
+body .wrap .mob_scroll div .razdelitel .right{
     margin: auto;
-    margin-left: 20px;
-    margin-top: 10px
+    margin-left: 0;
+    width: calc(100% - 44px) !important;
 }
 
-.mob_scroll{
-    max-height: 1000%;
-}
-
-.table_organizer{
-    height: calc(100% - 50px - 13px - 10px);
-    margin-bottom: 0;
-    overflow-y: auto;
-    padding-bottom: 0;
-    padding-right: 0;
-}
-.zaivka-info-card{
-    margin-left: 20px;
-}
-
-.Odobreno-btn--Otcloneno{
-    margin: 0px;
-    margin-left: 0px;
-    width: calc(100% - 15px - 15px);
-    color: rgb(25, 27, 29);
-    padding-top: 0;
-}
-.btn__margin-right {
-    margin-left: 5px;
-}
-.btn__margin-left {
-    margin-right: -5px;
-}
-
-.mob_admin_panel{
-    width: calc(100% - 30px);
-}
-.square-container{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 0px;
-    width: 100%;
-}
-.square{
-    flex-basis: 100%;
-    aspect-ratio: 9/5;
-    margin: 10px calc(10% / 6) 10px calc(10% / 6);
-    position: relative;
-    box-shadow: 0 0 0 3px rgb(21, 21, 21);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    user-select: none;
-    transition: all .2s ease;
-}
-
-#add-user-form{
-    display: none;
-}
-.zaivka-time{
-    width: calc(100% - 57px);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.main_user_details{
-    height: auto;
-}
-
-.car_license_plate div:nth-child(1) {
-display: none;
-  }
-.car_license_plate div:nth-child(2) {
-    background-color: white;
-    padding: 2px 5px;
-    border-radius: 5px;
-    transform: translateY(-2px);
-    margin-left: 5px;
-    color: black;
-    font-weight: 700;
-    box-shadow: 0 0 0 3px black;
-  }
-  .form_car_knopka{
-      width: 100%;
-  }
-  .car_knopka{
-      width: calc(100% - 40px);
-      margin-left: 10px;
-      padding-left: 0;
-      padding-right: 0;
-  }
-  .form_driver_knopka{
-      width: 100%;
-  }
-  .driver_knopka{
-      width: calc(100% - 40px);
-      margin-left: 5px;
-      padding-left: 0;
-      padding-right: 0;
-  }
 
 
 
@@ -573,16 +668,6 @@ display: none;
 
 
 
-
-
-
-
-
-
-
-
-
-    
 
 
 

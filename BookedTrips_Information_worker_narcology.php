@@ -31,6 +31,7 @@ if ($user['Account-type'] == 0) {
 <head>
 	<?php include 'php_constructor/head.php'; ?>
 	<link rel="stylesheet" href="css/CSSbti.css">
+	<link rel="stylesheet" href="css/CSSep_mobail.css"> <!-- Подключение стилей для мобильных устройств -->
 </head>
 
 

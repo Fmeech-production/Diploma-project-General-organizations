@@ -35,6 +35,7 @@ $nav_select = 2.5;
 	<?php include 'php_constructor/head.php'; ?>
 	<link rel="stylesheet" href="css/My_framevorke.css">
 	<link rel="stylesheet" href="css/CSSbti.css">
+	<link rel="stylesheet" href="css/CSSep_mobail.css"> <!-- Подключение стилей для мобильных устройств -->
 </head>
 
 

@@ -49,16 +49,23 @@ $nav_select = 3;    // Выбор активного пункта меню
 				<input class="main-inpyt" placeholder="<?= $loc['Optional_field'] ?>" value="<?= $user['PName'] ?>" name="PName">
 				<lable class="main-lable"><?= $loc['mail'] ?></lable>
 				<input style="margin-bottom:3px;" class="main-inpyt" placeholder="<?= $loc['Optional_field'] ?>" value="<?= $user['Email'] ?>" name="Email">
-				
-				<input style="margin-left:9px;" type="checkbox" id="new_notification1" name="new_notification1" <?php if ($user['new_notification1'] == 1) echo "checked"?>>
-				<lable style="width: calc(100% - 30px); margin-top:3px; " for="new_notification1" class="main-lable"><?= $loc['Присылать уведомления на почту при появлении новых сообщений'] ?></lable>
+
+
+				<lable style="width: calc(100% - 30px); margin-top:3px; " for="new_notification1" class="main-lable">
+					<input style="" type="checkbox" id="new_notification1" name="new_notification1" <?php if ($user['new_notification1'] == 1) echo "checked" ?>>
+					<?= $loc['Присылать уведомления на почту при появлении новых сообщений'] ?>
+				</lable>
 				<br>
-				
-				<input  style="margin-left:9px; margin-bottom:23px;"  type="checkbox" id="new_notification2" name="new_notification2" <?php if ($user['new_notification2'] == 1) echo "checked"?>>
-				<lable style="width: calc(100% - 30px); margin-top:3px; margin-bottom:20px;" for="new_notification2" class="main-lable"><?= $loc['Присылать уведомления на почту при изменениях в заявках'] ?></lable>
-				
+
+
+				<lable style="width: calc(100% - 30px); margin-top:3px; margin-bottom:20px;" for="new_notification2" class="main-lable">
+					<input style="" type="checkbox" id="new_notification2" name="new_notification2" <?php if ($user['new_notification2'] == 1) echo "checked" ?>>
+					<?= $loc['Присылать уведомления на почту при изменениях в заявках'] ?>
+				</lable>
+
 				<lable class="main-lable"><?= $loc['Telephone'] ?></lable>
 				<input class="main-inpyt" placeholder="<?= $loc['Optional_field'] ?>" value="<?= $user['Phone'] ?>" name="Phone">
+
 				<button class="form-btn" type="submit"> <?= $loc['Save'] ?> </button> <!-- Кнопка для сохранения изменений -->
 				<!--<button class="form-btn background-color-red exit-acc" onclick="document.cookie = 'login=;';">Выйти из аккаунта</button>-->
 			</form>

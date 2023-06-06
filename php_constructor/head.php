@@ -17,7 +17,7 @@ if ($user['Account-type'] == 4) { ?>
     <link rel="stylesheet" href="css/admin.css">
 <?php }
 ?>
-<link rel="stylesheet" href="css/CSSep_mobail.css?t=<?php echo (microtime(true) . rand()); ?>"> <!-- Подключение стилей для мобильных устройств -->
+<link rel="stylesheet" href="css/CSSep_mobail.css"> <!-- Подключение стилей для мобильных устройств -->
 <link rel="icon" type="image/x-icon" href="icons/logo1.png">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Подключение JQuery -->
 <script src="js/constructor.js"></script> <!-- Подключение скриптов для работы popup  -->

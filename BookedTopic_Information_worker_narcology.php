@@ -60,7 +60,7 @@ $Найденый_юзер = $результатЮзеров->fetch_assoc();
 			margin-bottom: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/CSSep_mobail.css?t=<?php echo (microtime(true) . rand()); ?>">
+	<link rel="stylesheet" href="css/CSSep_mobail.css">
 </head>
 
 
